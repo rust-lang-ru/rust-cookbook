@@ -3,7 +3,7 @@
 [Build Status travis]: https://api.travis-ci.com/rust-lang-nursery/rust-cookbook.svg?branch=master
 [travis]: https://travis-ci.com/rust-lang-ru/rust-cookbook
 
-**[Книга здесь]**.
+**[Книга здесь]**
 
 Этот *Сборник рецептов* является собранием маленьких примеров для языка программирования [Rust]. Используя крейты (crates) из экосистемы Rust эти примеры демонстрируют полезные идиомы и практики для выполнения обычных программистских задач
 
