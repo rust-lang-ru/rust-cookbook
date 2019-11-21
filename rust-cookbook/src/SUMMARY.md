@@ -1,9 +1,7 @@
 # Summary
 
 [Table of Contents](intro.md)
-
 [About](about.md)
-
 - [Algorithms](algorithms.md)
   - [Generate Random Values](algorithms/randomness.md)
   - [Sort a Vector](algorithms/sorting.md)
