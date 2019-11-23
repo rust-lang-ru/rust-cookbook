@@ -49,7 +49,7 @@ cargo new my-example --bin
 cd my-example
 ```
 
-Теперь вам также нужно добавить все необходимые крейты в файл [Cargo.toml], как показано в "шильдиках", в данном случае просто rand. Чтобы это сделать, используйте команду `cargo add`, которая реализована в крейте [`cargo-edit`] и вам его нужно сначала установить:
+Теперь вам также нужно добавить все необходимые крейты в файл `Cargo.toml`, как показано в "шильдиках", в данном случае просто rand. Чтобы это сделать, используйте команду `cargo add`, которая реализована в крейте [`cargo-edit`] и вам его нужно сначала установить:
 
 ```sh
 cargo install cargo-edit
@@ -100,6 +100,7 @@ fn main() -> Result<()> {
     println!("{:?}", addr);
     Ok(())
 }
+
 ```
 
 Этот пример использует макрос `error_chain!` чтобы определить пользовательские типы `Error` и
@@ -144,8 +145,7 @@ fn main() -> Result<()> {
 [указатель]: intro.html
 [эту главу в Rust book]: https://doc.rust-lang.org/book/error-handling.html
 [этот блог пост]: https://brson.github.io/2016/11/30/starting-with-error-chain
-[Rust Libz Blitz]: https://docs.rs/error-chain/
-[crates.io]: https://internals.rust-lang.org/t/rust-libz-blitz/5184
-[docs.rs]: https://crates.io
-[Cargo.toml]: https://docs.rs
-[`cargo-edit`]: http://doc.crates.io/manifest.html
+[Rust Libz Blitz]: https://internals.rust-lang.org/t/rust-libz-blitz/5184
+[crates.io]: https://crates.io
+[docs.rs]: https://docs.rs
+[`cargo-edit`]: https://github.com/killercup/cargo-edit
