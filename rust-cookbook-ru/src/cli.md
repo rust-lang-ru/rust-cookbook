@@ -1,6 +1,6 @@
 # Командная строка
 
-Рецепты | Крейты | Категории
+Рецепт | Крейты | Категории
 --- | --- | ---
 [Разбор аргументов командной строки] | [![clap-badge]][clap] | [![cat-command-line-badge]][cat-command-line]
 [ANSI терминал] | [![ansi_term-badge]][ansi_term] | [![cat-command-line-badge]][cat-command-line]
