@@ -27,7 +27,7 @@
     - [Разбор и отображение](datetime/parse.md)
 - [Инструменты разработки](development_tools.md)
     - [Отладка](development_tools/debugging.md)
-        - [Логгирование сообщений](development_tools/debugging/log.md)
+        - [Логирование сообщений](development_tools/debugging/log.md)
         - [Конфигурирование логгера](development_tools/debugging/config_log.md)
     - [Версионирование](development_tools/versioning.md)
     - [Инструменты времени компиляции](development_tools/build_tools.md)
