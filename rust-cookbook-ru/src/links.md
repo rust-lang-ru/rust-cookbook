@@ -1,1 +1,1 @@
-../../rust-cookbook/src/links.md
+
