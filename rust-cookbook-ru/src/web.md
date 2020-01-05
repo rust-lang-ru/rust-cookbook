@@ -1,11 +1,11 @@
 # Веб-программирование
 
-## Обкачка веб сайтов
+## Обработка веб-страниц
 
 Рецепт | Крейты | Категории
 --- | --- | ---
 [Извлечение всех ссылок из HTML-страницы] | [![reqwest-badge]][reqwest] [![select-badge]][select] | [![cat-net-badge]][cat-net]
-[Проверка вебстраницы на наличие мёртвых ссылок] | [![reqwest-badge]][reqwest] [![select-badge]][select] [![url-badge]][url] | [![cat-net-badge]][cat-net]
+[Проверка веб-страницы на наличие мёртвых ссылок] | [![reqwest-badge]][reqwest] [![select-badge]][select] [![url-badge]][url] | [![cat-net-badge]][cat-net]
 [Извлечение всех уникальных ссылок из страницы в формате MediaWiki] | [![reqwest-badge]][reqwest] [![regex-badge]][regex] | [![cat-net-badge]][cat-net]
 
 ## Работа с унифицированными указателями ресурсов (URL)
@@ -32,7 +32,7 @@
 
 
 [Извлечение всех ссылок из HTML-страницы]: web/scraping.html#extract-all-links-from-a-webpage-html
-[Проверка вебстраницы на наличие мёртвых ссылок]: web/scraping.html#check-a-webpage-for-broken-links
+[Проверка веб-страницы на наличие мёртвых ссылок]: web/scraping.html#check-a-webpage-for-broken-links
 [Извлечение всех уникальных ссылок из страницы в формате MediaWiki]: web/scraping.html#extract-all-unique-links-from-a-mediawiki-markup
 [Парсинг URL из строки в значение типа `Url`]: web/url.html#parse-a-url-from-a-string-to-a-url-type
 [Создание базового URL удалением сегментов пути]: web/url.html#create-a-base-url-by-removing-path-segments
