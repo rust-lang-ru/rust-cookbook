@@ -2,7 +2,7 @@
 
 [![ansi_term-badge]][ansi_term] [![cat-command-line-badge]][cat-command-line]
 
-Эта программа обрисовывает использование [`ansi_term` крейт] и как он используется для отображения текста с различным цветом, форматированием, к примеру, жирный синий или жёлтый подчёркнутый текст, на ANSI терминалах.
+Эта программа обрисовывает использование [`ansi_term` крейта] и как он используется для отображения текста с различным цветом, форматированием, к примеру, жирный синий или жёлтый подчёркнутый текст, на ANSI терминалах.
 
 У нас в наличии две главных структуры данных в [`ansi_term`]: [`ANSIString`](https://docs.rs/ansi_term/*/ansi_term/type.ANSIString.html) и [`Style`](https://docs.rs/ansi_term/*/ansi_term/struct.Style.html). Структура [`Style`](https://docs.rs/ansi_term/*/ansi_term/struct.Style.html) содержит информацию о стиле: цвета, должен ли текст быть жирным или мигающим или ещё каким-то. Есть два варианта Colour, которые представляют простые цвета букв. Структура [`ANSIString`](https://docs.rs/ansi_term/*/ansi_term/type.ANSIString.html) -- это просто строка в паре со [`Style`](https://docs.rs/ansi_term/*/ansi_term/struct.Style.html).
 
@@ -57,5 +57,5 @@ fn main(){
 ```
 
 
-[`ansi_term` крейт]: https://docs.rs/ansi_term/
+[`ansi_term` крейта]: https://docs.rs/ansi_term/
 [`Style::new()`]: https://crates.io/crates/ansi_term
