@@ -2,11 +2,11 @@
 
 [![chrono-badge]][chrono] [![cat-date-and-time-badge]][cat-date-and-time]
 
-Код парсит в структуру [`DateTime`](https://docs.rs/chrono/*/chrono/struct.DateTime.html) из строк, представляющих распространённые форматы [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt), [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) и пользовательский формат.
-Парсинг использует функции [`DateTime::parse_from_rfc2822`](https://docs.rs/chrono/*/chrono/struct.DateTime.html#method.parse_from_rfc2822), [`DateTime::parse_from_rfc3339`](https://docs.rs/chrono/*/chrono/struct.DateTime.html#method.parse_from_rfc3339), и
+Код совершает разбор в структуру [`DateTime`](https://docs.rs/chrono/*/chrono/struct.DateTime.html) строк, представляющих распространённые форматы [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt), [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) и пользовательский формат.
+Разбор использует функции [`DateTime::parse_from_rfc2822`](https://docs.rs/chrono/*/chrono/struct.DateTime.html#method.parse_from_rfc2822), [`DateTime::parse_from_rfc3339`](https://docs.rs/chrono/*/chrono/struct.DateTime.html#method.parse_from_rfc3339), и
 [`DateTime::parse_from_str`](https://docs.rs/chrono/*/chrono/struct.DateTime.html#method.parse_from_str) соответственно.
 
-Управляющие последовательсности, которые доступны для [`DateTime::parse_from_str`](https://docs.rs/chrono/*/chrono/struct.DateTime.html#method.parse_from_str) могут быть найдены в документации к [`chrono::format::strftime`](https://docs.rs/chrono/*/chrono/format/strftime/index.html).
+Управляющие последовательности, которые доступны для [`DateTime::parse_from_str`](https://docs.rs/chrono/*/chrono/struct.DateTime.html#method.parse_from_str), могут быть найдены в документации к [`chrono::format::strftime`](https://docs.rs/chrono/*/chrono/format/strftime/index.html).
 Заметим, что функция [`DateTime::parse_from_str`](https://docs.rs/chrono/*/chrono/struct.DateTime.html#method.parse_from_str) требует, что такая структура DateTime должна иметь возможность быть созданной так, что она однозначно определяет дату и время. Для парсинга дат и времён без временных зон мы используем [`NaiveDate`](https://docs.rs/chrono/*/chrono/naive/struct.NaiveDate.html), [`NaiveTime`](https://docs.rs/chrono/*/chrono/naive/struct.NaiveTime.html) и [`NaiveDateTime`](https://docs.rs/chrono/*/chrono/naive/struct.NaiveDateTime.html).
 
 ```rust
