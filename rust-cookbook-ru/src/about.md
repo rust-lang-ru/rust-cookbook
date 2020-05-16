@@ -100,11 +100,9 @@ fn main() -> Result<()> {
     println!("{:?}", addr);
     Ok(())
 }
-
 ```
 
-Этот пример использует макрос `error_chain!` чтобы определить пользовательские типы `Error` и
-`Result`, наряду с автоматическими преобразованиями для типов ошибок из стандартной библиотеки. Такие автоматические преобразования позволят работать оператору `?`.
+Этот пример использует макрос `error_chain!` чтобы определить пользовательские типы `Error` и `Result`, наряду с автоматическими преобразованиями для типов ошибок из стандартной библиотеки. Такие автоматические преобразования позволят работать оператору `?`.
 
 Для целей повышения читаемости механический код связанный с обработкой ошибок по умолчанию скрыт. Чтобы посмотреть полное содержимое примера, нажмите на кнопку "expand" (<i class="fa fa-expand">), помещённую в верхнем левом углу фрагмента кода.</i>
 
@@ -145,7 +143,7 @@ fn main() -> Result<()> {
 [указатель]: intro.html
 [эту главу в Rust book]: https://doc.rust-lang.org/book/error-handling.html
 [этот блог пост]: https://brson.github.io/2016/11/30/starting-with-error-chain
-[Rust Libz Blitz]: https://internals.rust-lang.org/t/rust-libz-blitz/5184
-[crates.io]: https://crates.io
-[docs.rs]: https://docs.rs
-[`cargo-edit`]: https://github.com/killercup/cargo-edit
+[Rust Libz Blitz]: https://docs.rs/error-chain/
+[crates.io]: https://internals.rust-lang.org/t/rust-libz-blitz/5184
+[docs.rs]: https://crates.io
+[`cargo-edit`]: https://docs.rs
