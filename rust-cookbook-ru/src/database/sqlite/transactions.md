@@ -4,12 +4,9 @@
 
 [`Connection::open`] откроет базу данных `cats.db` из первого рецепта.
 
-Begin a transaction with [`Connection::transaction`](https://docs.rs/rusqlite/*/rusqlite/struct.Connection.html#method.transaction). Transactions will
-roll back unless committed explicitly with [`Transaction::commit`](https://docs.rs/rusqlite/*/rusqlite/struct.Transaction.html#method.commit).
+Начните транзакцию с помощью [`Connection::transaction`](https://docs.rs/rusqlite/*/rusqlite/struct.Connection.html#method.transaction). Транзакции будут отменены, если они не будут явно закрыты с помощью [`Transaction::commit`](https://docs.rs/rusqlite/*/rusqlite/struct.Transaction.html#method.commit).
 
-In the following example, colors add to a table having
-a unique constraint on the color name. When an attempt to insert
-a duplicate color is made, the transaction rolls back.
+В следующем примере цвета добавляются в таблицу, которая имеет ограничение на уникальность для названия цвета. При попытке вставки дублирующего цвета транзакция откатывается.
 
 ```rust,no_run
 extern crate rusqlite;
@@ -48,3 +45,5 @@ fn rolled_back_tx(conn: &mut Connection) -> Result<()> {
     tx.commit()
 }
 ```
+
+
