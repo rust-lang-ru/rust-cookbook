@@ -4,7 +4,7 @@
 
 Создает две двумерные матрицы (2-D) с помощью [`ndarray::arr2`](https://docs.rs/ndarray/*/ndarray/fn.arr2.html) и суммирует их поэлементно.
 
-Note the sum is computed as `let sum = &a + &b`. The `&` operator is used to avoid consuming `a` and `b`, making them available later for display. A new array is created containing their sum.
+Обратите внимание, что сумма вычисляется как `let sum = &a + &b`. Оператор `&` используется, чтобы избежать поглощения `a` и `b` и сделать их доступными для отображения позже. Создается новый массив, содержащий их сумму.
 
 ```rust
 extern crate ndarray;
@@ -27,3 +27,5 @@ fn main() {
     println!("{}", sum);
 }
 ```
+
+
