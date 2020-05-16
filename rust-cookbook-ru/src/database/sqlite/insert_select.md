@@ -2,8 +2,7 @@
 
 [![rusqlite-badge]][rusqlite] [![cat-database-badge]][cat-database]
 
-[`Connection::open`](https://docs.rs/rusqlite/*/rusqlite/struct.Connection.html#method.open) will open the database `cats` created in the earlier recipe.
-This recipe inserts data into `cat_colors` and `cats` tables using the [`execute`](https://docs.rs/rusqlite/*/rusqlite/struct.Connection.html#method.execute) method of `Connection`. First, the data is inserted into the `cat_colors` table. After a record for a color is inserted, [`last_insert_rowid`](https://docs.rs/rusqlite/*/rusqlite/struct.Connection.html#method.last_insert_rowid) method of `Connection` is used to get `id` of the last color inserted. This `id` is used while inserting data into the `cats` table. Then, the select query is prepared using the [`prepare`](https://docs.rs/rusqlite/*/rusqlite/struct.Connection.html#method.prepare) method which gives a [`statement`](https://docs.rs/rusqlite/*/rusqlite/struct.Statement.html) struct. Then, query is executed using [`query_map`](https://docs.rs/rusqlite/*/rusqlite/struct.Statement.html#method.query_map) method of [`statement`](https://docs.rs/rusqlite/*/rusqlite/struct.Statement.html).
+[`Connection::open`](https://docs.rs/rusqlite/*/rusqlite/struct.Connection.html#method.open) откроет базу данных `cats`, созданную в прошлом рецепте. Этот рецепт создаёт таблицы `cat_colors` и `cats` с помощью метода [`execute`](https://docs.rs/rusqlite/*/rusqlite/struct.Connection.html#method.execute) из `Connection`. Сначала данные вставляются в таблицу `cat_colors`. После того как запись о цвете вставилась, метод [`last_insert_rowid`](https://docs.rs/rusqlite/*/rusqlite/struct.Connection.html#method.last_insert_rowid) из `Connection` используется для получения `id` последней вставленной записи цвета. Этот `id` используется при вставке данных в таблицу `cats`. Затем подготавливается запрос на выборку с помощью метода [`prepare`](https://docs.rs/rusqlite/*/rusqlite/struct.Connection.html#method.prepare), который возвращает структуру [`statement`](https://docs.rs/rusqlite/*/rusqlite/struct.Statement.html). Затем выполняется запрос,  используя метод [`query_map`](https://docs.rs/rusqlite/*/rusqlite/struct.Statement.html#method.query_map) из [`statement`](https://docs.rs/rusqlite/*/rusqlite/struct.Statement.html).
 
 ```rust,no_run
 extern crate rusqlite;
@@ -59,3 +58,5 @@ fn main() -> Result<()> {
     Ok(())
 }
 ```
+
+
