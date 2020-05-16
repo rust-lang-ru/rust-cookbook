@@ -2,7 +2,7 @@
 
 [![ndarray-badge]](https://docs.rs/crate/ndarray/*)
 
-Крейт [ndarray](https://docs.rs/crate/ndarray/*) поддерживает несколько способов создания массивов - этот рецепт создаёт [`ndarray::Array`](https://docs.rs/ndarray/*/ndarray/struct.ArrayBase.html) массивы из `std::Vec`, используя `from`. Затем он суммирует массивы поэлементно.
+Крейт [ndarray](https://docs.rs/crate/ndarray/*) поддерживает несколько способов создания массивов - этот рецепт создаёт [`ndarray::Array`](https://docs.rs/ndarray/*/ndarray/struct.ArrayBase.html) массивы из `std::Vec`, используя `from`. Затем он суммирует массивы поэлементно. 
 
 Этот рецепт содержит пример поэлементного сравнения двух векторов с плавающей точкой. Числа с плавающей точкой часто хранятся неточно, что затрудняет точное сравнение. Тем не менее, [`assert_abs_diff_eq!`](https://docs.rs/approx/*/approx/macro.assert_abs_diff_eq.html) макрос из крейта [`approx`](https://docs.rs/approx/*/approx/index.html) позволяет удобное, поэлементное сравнение. Для того, чтобы использовать `approx` крейта с `ndarray`, то функция `approx` должна быть добавлена к `ndarray` зависимости в `Cargo.toml`. Например, `ndarray = { version = "0.13", features = ["approx"] }` .
 
@@ -34,4 +34,3 @@ fn main() {
 
 }
 ```
-
