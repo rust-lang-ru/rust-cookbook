@@ -2,7 +2,7 @@
 
 [![rusqlite-badge]][rusqlite] [![cat-database-badge]][cat-database]
 
-Пакет `rusqlite` позволяет работать с базами данных SQLite. Посмотрите [этот пакет](https://github.com/jgallagher/rusqlite#user-content-notes-on-building-rusqlite-and-libsqlite3-sys), если вам необходима компиляция под Windows.
+Пакет `rusqlite` позволяет работать с базами данных SQLite. Посмотрите [этот пакет], если вам необходима компиляция под Windows.
 
 [`Connection::open`](https://docs.rs/rusqlite/*/rusqlite/struct.Connection.html#method.open) создаёт базу данных, если она ещё не существует.
 
@@ -34,3 +34,6 @@ fn main() -> Result<()> {
     Ok(())
 }
 ```
+
+
+[этот пакет]: https://docs.rs/rusqlite/*/rusqlite/struct.Connection.html#method.open
