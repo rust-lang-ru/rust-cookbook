@@ -2,7 +2,7 @@
 
 [![ndarray-badge]][ndarray] [![cat-science-badge]][cat-science]
 
-Создаёт две матрицы с помощью [`ndarray::arr2`](https://docs.rs/ndarray/*/ndarray/fn.arr2.html) и выполняет перемножение матриц с помощью [`ndarray::ArrayBase::dot`](https://docs.rs/ndarray/*/ndarray/struct.ArrayBase.html#method.dot-1) .
+Создаёт две матрицы с помощью [`ndarray::arr2`](https://docs.rs/ndarray/*/ndarray/fn.arr2.html) и выполняет перемножение матриц с помощью [`ndarray::ArrayBase::dot`](https://docs.rs/ndarray/*/ndarray/struct.ArrayBase.html#method.dot-1).
 
 ```rust
 extern crate ndarray;
@@ -20,4 +20,3 @@ fn main() {
     println!("{}", a.dot(&b));
 }
 ```
-
