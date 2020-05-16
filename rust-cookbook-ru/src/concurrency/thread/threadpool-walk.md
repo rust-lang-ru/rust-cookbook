@@ -1,4 +1,4 @@
-## Конкурентный рассчет хеш-суммы SHA256 iso файлов
+## Конкурентный расчёт хеш-суммы SHA256 iso файлов
 
 [![threadpool-badge]][threadpool] [![num_cpus-badge]][num_cpus] [![walkdir-badge]][walkdir] [![ring-badge]][ring] [![cat-concurrency-badge]][cat-concurrency][![cat-filesystem-badge]][cat-filesystem]
 
@@ -68,5 +68,4 @@ fn main() -> Result<(), Error> {
     Ok(())
 }
 ```
-
 
