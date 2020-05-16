@@ -2,7 +2,7 @@
 
 [![postgres-badge]][postgres] [![cat-database-badge]][cat-database]
 
-Этот рецепт выводит в порядке убывания национальности первых 7999 художников из базы данных ["Museum of Modern Art"](https://github.com/MuseumofModernArt/collection/blob/master/Artists.csv).
+Этот рецепт выводит в порядке убывания национальности первых 7999 художников из базы данных ["Museum of Modern Art"].
 
 ```rust,no_run
 extern crate postgres;
@@ -40,3 +40,6 @@ fn main() -> Result<(), Error> {
     Ok(())
 }
 ```
+
+
+["Museum of Modern Art"]: https://github.com/MuseumofModernArt/collection/blob/master/Artists.csv
