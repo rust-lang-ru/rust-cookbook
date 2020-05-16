@@ -4,7 +4,7 @@
 
 Используйте пакет [`postgres`](https://docs.rs/postgres/0.15.2/postgres/) для создания таблиц в Postgres.
 
-[`Client::connect`](https://docs.rs/postgres/0.17.2/postgres/struct.Client.html#method.connect) helps in connecting to an existing database. The recipe uses a URL string format with `Client::connect`. It assumes an existing database named `library`, the username is `postgres` and the password is `postgres`.
+С помощью [`Client::connect`] можно присоединиться к существующей базе данных. Этот рецепт использует строку подключения в формате URL для передачи в `Client::connect`. Эта фукнция предполагает, что база данных существует, названа `library`, имя пользователя `postgres` и пароль `postgres`.
 
 ```rust,no_run
 extern crate postgres;
@@ -34,3 +34,6 @@ fn main() -> Result<(), Error> {
 
 }
 ```
+
+
+[`Client::connect`]: https://docs.rs/postgres/0.17.2/postgres/
