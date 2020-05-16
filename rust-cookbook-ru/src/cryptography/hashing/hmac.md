@@ -2,7 +2,7 @@
 
 [![ring-badge]][ring] [![cat-cryptography-badge]][cat-cryptography]
 
-Пример использует [`ring::hmac`](https://briansmith.org/rustdoc/ring/hmac/) для создания [`hmac::Signature`](https://briansmith.org/rustdoc/ring/hmac/struct.Signature.html) из строки, а затем проверяет, что сигнатура корректна.
+Пример использует [`ring::hmac`] для создания [`hmac::Signature`] из строки, а затем проверяет, что сигнатура корректна.
 
 ```rust
 extern crate ring;
@@ -24,3 +24,7 @@ fn main() -> Result<(), Unspecified> {
     Ok(())
 }
 ```
+
+
+[`hmac::Signature`]: https://briansmith.org/rustdoc/ring/hmac/struct.Signature.html
+[`ring::hmac`]: https://briansmith.org/rustdoc/ring/hmac/
