@@ -2,7 +2,7 @@
 
 [![ndarray-badge]][ndarray] [![cat-science-badge]][cat-science]
 
-Создать одномерный 1-D массив (вектор) с помощью [`ndarray::arr1`](https://docs.rs/ndarray/*/ndarray/fn.arr1.html) и двумерных 2-D массив (матрицу) с помощью [`ndarray::arr2`](https://docs.rs/ndarray/*/ndarray/fn.arr2.html).
+Создаёт одномерный 1-D массив (вектор) с помощью [`ndarray::arr1`](https://docs.rs/ndarray/*/ndarray/fn.arr1.html) и двумерных 2-D массив (матрицу) с помощью [`ndarray::arr2`](https://docs.rs/ndarray/*/ndarray/fn.arr2.html).
 
 Сначала скаляр умножается на вектор, чтобы получить другой вектор. Затем матрица умножается на новый вектор с помощью [`ndarray::Array2::dot`](https://docs.rs/ndarray/*/ndarray/struct.ArrayBase.html#method.dot-1). (Матричное умножение выполняется с использованием метода `dot`, а оператор `*` выполняет поэлементное умножение.)
 
@@ -28,5 +28,4 @@ fn main() {
     println!("{}", new_matrix);
 }
 ```
-
 
