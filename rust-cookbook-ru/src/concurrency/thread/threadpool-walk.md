@@ -1,8 +1,8 @@
-## Calculate SHA256 sum of iso files concurrently
+## Конкурентный рассчет хеш-суммы SHA256 iso файлов
 
 [![threadpool-badge]][threadpool] [![num_cpus-badge]][num_cpus] [![walkdir-badge]][walkdir] [![ring-badge]][ring] [![cat-concurrency-badge]][cat-concurrency][![cat-filesystem-badge]][cat-filesystem]
 
-This example calculates the SHA256 for every file with iso extension in the current directory. A threadpool generates threads equal to the number of cores present in the system found with [`num_cpus::get`](https://docs.rs/num_cpus/*/num_cpus/fn.get.html).  [`Walkdir::new`](https://docs.rs/walkdir/*/walkdir/struct.WalkDir.html#method.new) iterates the current directory and calls [`execute`](https://docs.rs/threadpool/*/threadpool/struct.ThreadPool.html#method.execute) to perform the operations of reading and computing SHA256 hash.
+Этот пример рассчитывает SHA256 для всех файлов с расширением iso в текущей директории. Пул потоков генерирует потоки в количестве, равному количеству ядер в системе найденные с помощью [`num_cpus::get`](https://docs.rs/num_cpus/*/num_cpus/fn.get.html).  [`Walkdir::new`](https://docs.rs/walkdir/*/walkdir/struct.WalkDir.html#method.new) итерируется по директории и вызывает [`execute`](https://docs.rs/threadpool/*/threadpool/struct.ThreadPool.html#method.execute) чтобы совершить операцию чтения файла и вычисления SHA1 хэш-суммы.
 
 ```rust,no_run
 extern crate walkdir;
@@ -18,7 +18,7 @@ use threadpool::ThreadPool;
 use std::sync::mpsc::channel;
 use ring::digest::{Context, Digest, SHA256};
 
-# // Verify the iso extension
+# // Проверка iso расширения
 # fn is_iso(entry: &Path) -> bool {
 #     match entry.extension() {
 #         Some(e) if e.to_string_lossy().to_lowercase() == "iso" => true,
@@ -68,3 +68,5 @@ fn main() -> Result<(), Error> {
     Ok(())
 }
 ```
+
+
