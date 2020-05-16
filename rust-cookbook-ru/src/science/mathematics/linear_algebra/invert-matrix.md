@@ -2,7 +2,7 @@
 
 [![nalgebra-badge]][nalgebra] [![cat-science-badge]][cat-science]
 
-Создаёт матрицу 3x3 с помощью [`nalgebra::Matrix3`](https://docs.rs/nalgebra/*/nalgebra/base/type.Matrix3.html) и инвертирует ее, если возможно.
+Создаёт матрицу 3x3 с помощью [`nalgebra::Matrix3`](https://docs.rs/nalgebra/*/nalgebra/base/type.Matrix3.html) и инвертирует её, если возможно.
 
 ```rust
 extern crate nalgebra;
@@ -22,4 +22,3 @@ fn main() {
     }
 }
 ```
-
