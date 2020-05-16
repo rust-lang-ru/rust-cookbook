@@ -20,5 +20,3 @@ fn main() {
     println!("{}", a.dot(&b));
 }
 ```
-
-
