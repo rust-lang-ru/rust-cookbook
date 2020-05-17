@@ -2,7 +2,7 @@
 
 [![mime-badge]][mime] [![cat-encoding-badge]][cat-encoding]
 
-Этот пример показывает, как осуществить разбор в тип [`MIME`](https://docs.rs/mime/*/mime/struct.Mime.html) из некоторой строки при помощи функций из крейта [mime]. [`FromStrError`](https://docs.rs/mime/*/mime/struct.FromStrError.html) выводит [`MIME`](https://docs.rs/mime/*/mime/struct.Mime.html) тип по-умолчанию для параметра, переданного в `unwrap_or`.
+Этот пример показывает, как осуществить разбор в тип [`MIME`](https://docs.rs/mime/*/mime/struct.Mime.html) из некоторой строки при помощи функций из крейта [mime]. [`FromStrError`](https://docs.rs/mime/*/mime/struct.FromStrError.html) выводит [`MIME`](https://docs.rs/mime/*/mime/struct.Mime.html) тип по умолчанию для параметра, переданного в `unwrap_or`.
 
 ```rust
 extern crate mime;
@@ -30,5 +30,4 @@ fn main() {
     );
 }
 ```
-
 

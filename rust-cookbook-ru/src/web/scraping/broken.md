@@ -2,7 +2,7 @@
 
 [![reqwest-badge]][reqwest] [![select-badge]][select] [![url-badge]][url] [![cat-net-badge]][cat-net]
 
-В примере вызывается функция `get_base_url` чтобы получить базовый URL адрес. Если в документе найден нужный тэг, можно затем получить аттрибут href через [`attr`](https://docs.rs/select/*/select/node/struct.Node.html#method.attr)  из базового тэга. [`Position::BeforePath`](https://docs.rs/url/*/url/enum.Position.html#variant.BeforePath) для изначального URL адреса работает как адрес по-умолчанию.
+В примере вызывается функция `get_base_url` чтобы получить базовый URL адрес. Если в документе найден нужный тэг, можно затем получить атрибут href через [`attr`](https://docs.rs/select/*/select/node/struct.Node.html#method.attr)  из базового тэга. [`Position::BeforePath`](https://docs.rs/url/*/url/enum.Position.html#variant.BeforePath) для изначального URL адреса работает как адрес по умолчанию.
 
 Затем производится итерация по ссылкам в документе и разбор с помощью [`url::ParseOptions`](https://docs.rs/url/*/url/struct.ParseOptions.html) и [`Url::parse`](https://docs.rs/url/*/url/struct.Url.html#method.parse)). Далее выполняются запросы по полученным ссылкам с помощью функций из крейта reqwest и у соответствующих ответов проверяются его [`StatusCode`](https://docs.rs/reqwest/*/reqwest/struct.StatusCode.html).
 
@@ -69,5 +69,4 @@ fn main() -> Result<()> {
     Ok(())
 }
 ```
-
 
