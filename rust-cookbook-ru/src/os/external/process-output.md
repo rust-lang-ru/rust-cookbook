@@ -2,7 +2,7 @@
 
 [![regex-badge]][regex] [![cat-os-badge]][cat-os] [![cat-text-processing-badge]][cat-text-processing]
 
-Запускает `git log --oneline` как внешнюю команду [`Command`] и проверяет ее вывод [`Output`] используя [`Regex`](https://docs.rs/regex/*/regex/struct.Regex.html), чтобы получить хеш и сообщение о последних 5 коммитах.
+Запускает `git log --oneline` как внешнюю команду [`Command`] и проверяет её вывод [`Output`] используя [`Regex`](https://docs.rs/regex/*/regex/struct.Regex.html), чтобы получить хеш и сообщение о последних 5 коммитах.
 
 ```rust,no_run
 # #[macro_use]
