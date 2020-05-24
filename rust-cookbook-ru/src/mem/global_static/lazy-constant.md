@@ -2,7 +2,7 @@
 
 [![lazy_static-badge]][lazy_static] [![cat-caching-badge]][cat-caching] [![cat-rust-patterns-badge]][cat-rust-patterns]
 
-Объявляет лениво вычисляемыю константу [`HashMap`]. Катра [`HashMap`](https://doc.rust-lang.org/std/collections/struct.HashMap.html) будет сразу вычислена и сохранена в глобальной статической ссылке.
+Объявляет лениво вычисляемую константу типа [`HashMap`]. Коллекция [`HashMap`](https://doc.rust-lang.org/std/collections/struct.HashMap.html) будет сразу вычислена и сохранена в глобальной статической ссылке.
 
 ```rust
 #[macro_use]
