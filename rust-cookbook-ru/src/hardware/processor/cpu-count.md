@@ -1,4 +1,4 @@
-## Проверить количество логических ядер процессора
+## Проверка количество логических ядер процессора
 
 [![num_cpus-badge]][num_cpus] [![cat-hardware-support-badge]][cat-hardware-support]
 
