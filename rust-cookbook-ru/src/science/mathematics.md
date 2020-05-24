@@ -25,10 +25,10 @@
 [Норма вектора]: science/mathematics/linear_algebra.html#vector-norm
 [Сложение матриц]: science/mathematics/linear_algebra.html#adding-matrices
 [Перемножение матриц]: science/mathematics/linear_algebra.html#multiplying-matrices
-[Умножение скалара на вектор и матрицу]: science/mathematics/linear_algebra.html#multiply-a-scalar-with-a-vector-with-a-matrix
+[Умножение скаляра на вектор и матрицу]: science/mathematics/linear_algebra.html#multiply-a-scalar-with-a-vector-with-a-matrix
 [Инвертирование матрицы]: science/mathematics/linear_algebra.html#invert-matrix
 [Расчёт боковой стороны треугольника]: science/mathematics/trigonometry.html#calculating-the-side-length-of-a-triangle
-[Проверка, что тангенс равен синусу делёному на косинус]: science/mathematics/trigonometry.html#verifying-tan-is-equal-to-sin-divided-by-cos
+[Проверка, что тангенс равен синусу делённому на косинус]: science/mathematics/trigonometry.html#verifying-tan-is-equal-to-sin-divided-by-cos
 [Расстояние между двумя точками на поверхности сферы]: science/mathematics/trigonometry.html#distance-between-two-points-on-the-earth
 [Создание комплексных чисел]: science/mathematics/complex_numbers.html#creating-complex-numbers
 [Сложение комплексных числе]: science/mathematics/complex_numbers.html#adding-complex-numbers

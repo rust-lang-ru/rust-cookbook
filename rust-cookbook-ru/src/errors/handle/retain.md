@@ -4,7 +4,7 @@
 
 Крейт [error-chain] делает [сопоставление](https://docs.rs/error-chain/*/error_chain/#matching-errors) с различными типами ошибок, возвращаемых функцией, возможным и относительно компактным. [`ErrorKind`](https://docs.rs/error-chain/*/error_chain/example_generated/enum.ErrorKind.html) определяет тип ошибки.
 
-Используется библиотека [reqwest] для запроса веб-службы генератора случайных целых чисел. Преобразует строковый ответ в целое число. Стандартная библиотека Rust, библиотека [reqwest] и веб-сервис могут вернуть ошибки. Хорошо определенные ошибки Rust используют [`foreign_links`](https://docs.rs/error-chain/*/error_chain/#foreign-links). Дополнительный вариант [`ErrorKind`](https://docs.rs/error-chain/*/error_chain/example_generated/enum.ErrorKind.html) для ошибки веб-службы использует блок `errors` в `error_chain!` макросе.
+Используется библиотека [reqwest] для запроса веб-службы генератора случайных целых чисел. Преобразует строковый ответ в целое число. Стандартная библиотека Rust, библиотека [reqwest] и веб-сервис могут вернуть ошибки. Хорошо опредёленные ошибки Rust используют [`foreign_links`](https://docs.rs/error-chain/*/error_chain/#foreign-links). Дополнительный вариант [`ErrorKind`](https://docs.rs/error-chain/*/error_chain/example_generated/enum.ErrorKind.html) для ошибки веб-службы использует блок `errors` в `error_chain!` макросе.
 
 ```rust
 #[macro_use]
@@ -54,5 +54,4 @@ fn main() {
     }
 }
 ```
-
 
