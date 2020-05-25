@@ -2,7 +2,7 @@
 
 [![log-badge]][log] [![env_logger-badge]][env_logger] [![cat-debugging-badge]][cat-debugging]
 
-Крейты с двымя модулями `foo` и вложенным `foo::bar` с директивами логирования, управляемыми отдельно с помощью переменной среды [`RUST_LOG`](https://docs.rs/env_logger/*/env_logger/#enabling-logging).
+Здесь представлены крейты с двумя модулями `foo` и вложенным `foo::bar` с директивами логирования, управляемыми отдельно с помощью переменной среды [`RUST_LOG`](https://docs.rs/env_logger/*/env_logger/#enabling-logging).
 
 ```rust
 #[macro_use]
@@ -35,7 +35,7 @@ fn main() {
 }
 ```
 
-Переменная среды [`RUST_LOG`](https://docs.rs/env_logger/*/env_logger/#enabling-logging) управляет выводом [`env_logger`][env_logger] в [env_logger]. Объявления модуля принимают разделенные запятыми записи, отформатированные как `path::to::module=log_level`. Запустите приложение `test` следующим образом:
+Переменная среды [`RUST_LOG`](https://docs.rs/env_logger/*/env_logger/#enabling-logging) управляет выводом [`env_logger`][env_logger] в [env_logger]. Объявления модуля принимают разделённые запятыми записи, отформатированные как `path::to::module=log_level`. Запуск приложение `test` осуществляется следующим образом:
 
 ```bash
 RUST_LOG="warn,test::foo=info,test::foo::bar=debug" ./test
