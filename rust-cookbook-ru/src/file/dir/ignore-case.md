@@ -4,7 +4,7 @@
 
 Найдите все файлы изображений в каталоге `/media/` соответствующие образцу `img_[0-9]*.png`.
 
-Пользовательская структура [`MatchOptions`](https://docs.rs/glob/*/glob/struct.MatchOptions.html) передается в функцию [`glob_with`](https://docs.rs/glob/*/glob/fn.glob_with.html) делая шаблон glob нечувствительным к регистру, оставляя другие параметры по умолчанию как [`Default`].
+Пользовательская структура [`MatchOptions`](https://docs.rs/glob/*/glob/struct.MatchOptions.html) передаётся в функцию [`glob_with`](https://docs.rs/glob/*/glob/fn.glob_with.html) делая шаблон glob нечувствительным к регистру, оставляя другие параметры по умолчанию как [`Default`].
 
 ```rust,no_run
 # #[macro_use]
