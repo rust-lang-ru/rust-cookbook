@@ -2,9 +2,9 @@
 
 [![log-badge]][log] [![log4rs-badge]][log4rs] [![cat-debugging-badge]][cat-debugging]
 
-Крейт [log4rs] настраивает вывод журнала в пользовательское место. [log4rs] может использовать либо внешний файл YAML, либо программную конфигурацию.
+Крейт [log4rs] настраивает вывод журнала в место, определяемое пользователем. Для конфигурирования [log4rs] может использовать либо внешний файл YAML, либо его можно сконфигурировать программно.
 
-Создайте конфигурацию логов с помощью [`log4rs::append::file::FileAppender`](https://docs.rs/log4rs/*/log4rs/append/file/struct.FileAppender.html). Appender определяет место назначения логирования. Конфигурация продолжается кодированием формата одной записи с использованием пользовательского шаблона из [`log4rs::encode::pattern`](https://docs.rs/log4rs/*/log4rs/encode/pattern/index.html). Конфигурация присваивается [`log4rs::config::Config`](https://docs.rs/log4rs/*/log4rs/config/struct.Config.html) и устанавливается по умолчанию [`log::LevelFilter`](https://docs.rs/log/*/log/enum.LevelFilter.html) .
+Конфигурацию создаётся с помощью [`log4rs::append::file::FileAppender`](https://docs.rs/log4rs/*/log4rs/append/file/struct.FileAppender.html). Appender определяет место назначения логирования. Далее кодируется формат отдельной записи с использованием пользовательского шаблона из [`log4rs::encode::pattern`](https://docs.rs/log4rs/*/log4rs/encode/pattern/index.html). Конфигурация присваивается [`log4rs::config::Config`](https://docs.rs/log4rs/*/log4rs/config/struct.Config.html) и устанавливается по умолчанию [`log::LevelFilter`](https://docs.rs/log/*/log/enum.LevelFilter.html) .
 
 ```rust,no_run
 # #[macro_use]
