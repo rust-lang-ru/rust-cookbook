@@ -2,7 +2,7 @@
 
 [![base64-badge]][base64] [![cat-encoding-badge]][cat-encoding]
 
-Кодирует срез байт в строку `base64` с использованием функции [`encode`](https://docs.rs/base64/*/base64/fn.encode.html) и декодирует ее с помощью функции [`decode`](https://docs.rs/base64/*/base64/fn.decode.html).
+Кодирует байтовый срез в строку `base64` с использованием функции [`encode`](https://docs.rs/base64/*/base64/fn.encode.html) и декодирует её с помощью функции [`decode`](https://docs.rs/base64/*/base64/fn.decode.html).
 
 ```rust
 # #[macro_use]

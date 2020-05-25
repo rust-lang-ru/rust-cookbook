@@ -2,7 +2,7 @@
 
 [![csv-badge]][csv] [![serde-badge]][serde] [![cat-encoding-badge]][cat-encoding]
 
-Файлы CSV часто содержат неверные данные. Для этих случаев крейт `csv` предоставляет специальный десериализатор [`csv::invalid_option`](https://docs.rs/csv/*/csv/fn.invalid_option.html), который автоматически преобразует недопустимые данные в значения None.
+Файлы CSV часто содержат неверные данные. Для этих случаев крейт `csv` предоставляет специальный десериализатор [`csv::invalid_option`](https://docs.rs/csv/*/csv/fn.invalid_option.html), который автоматически преобразует недопустимые данные в значения `None`.
 
 ```rust
 extern crate csv;

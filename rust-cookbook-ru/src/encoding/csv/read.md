@@ -29,7 +29,7 @@ fn main() -> Result<(), Error> {
 }
 ```
 
-Serde десериализует данные в строго типиированные структуры. Смотрите на метод [`csv::Reader::deserialize`](https://docs.rs/csv/*/csv/struct.Reader.html#method.deserialize).
+Serde может десериализовать данные в строго типизированные структуры. Смотрите на метод [`csv::Reader::deserialize`](https://docs.rs/csv/*/csv/struct.Reader.html#method.deserialize).
 
 ```rust
 extern crate csv;

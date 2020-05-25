@@ -2,7 +2,7 @@
 
 [![url-badge]][url] [![cat-encoding-badge]][cat-encoding]
 
-Кодирует строку в синтаксис [application/x-www-form-urlencoded] используя [`form_urlencoded::byte_serialize`](https://docs.rs/url/*/url/form_urlencoded/fn.byte_serialize.html), а затем декодирует ее с помощью [`form_urlencoded::parse`](https://docs.rs/url/*/url/form_urlencoded/fn.parse.html). Обе функции возвращают итераторы, которые преобразуются в `String`.
+Кодирует строку в синтаксис [application/x-www-form-urlencoded] используя [`form_urlencoded::byte_serialize`](https://docs.rs/url/*/url/form_urlencoded/fn.byte_serialize.html), а затем декодирует её с помощью [`form_urlencoded::parse`](https://docs.rs/url/*/url/form_urlencoded/fn.parse.html). Обе функции возвращают итераторы, которые преобразуются в `String`.
 
 ```rust
 extern crate url;
