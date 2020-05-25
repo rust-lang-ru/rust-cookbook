@@ -2,7 +2,7 @@
 
 [![regex-badge]][regex] [![cat-text-processing-badge]][cat-text-processing]
 
-Обрабатывает строку текста, используя [`Regex::captures_iter`](https://docs.rs/regex/*/regex/struct.Regex.html#method.captures_iter) для захвата нескольких телефонных номеров. Пример для телефонных номеров с видом записи для США.
+Обрабатывает строку текста, используя [`Regex::captures_iter`](https://docs.rs/regex/*/regex/struct.Regex.html#method.captures_iter) для распознавания нескольких телефонных номеров. Пример приведён для телефонных номеров с видом записи для США.
 
 ```rust
 # #[macro_use]
