@@ -2,9 +2,9 @@
 
 [![regex-badge]][regex] [![lazy_static-badge]][lazy_static] [![cat-text-processing-badge]][cat-text-processing]
 
-Извлечь, отсортировать и дедуплицировать список хэштегов из текста.
+Извлечь, отсортировать и очистить от дубликатов список хэштегов из текста.
 
-Приведенное здесь хештегное регулярное выражение перехватывает только латинские хештеги, начинающиеся с буквы. Полное [регулярное выражение хештега в твиттере](https://github.com/twitter/twitter-text/blob/c9fc09782efe59af4ee82855768cfaf36273e170/java/src/com/twitter/Regex.java#L255) намного сложнее.
+Приведённое здесь регулярное выражение перехватывает только латинские хэштеги, начинающиеся с буквы. Полное [регулярное выражение хэштега в твиттере](https://github.com/twitter/twitter-text/blob/c9fc09782efe59af4ee82855768cfaf36273e170/java/src/com/twitter/Regex.java#L255) намного сложнее.
 
 ```rust
 extern crate regex;

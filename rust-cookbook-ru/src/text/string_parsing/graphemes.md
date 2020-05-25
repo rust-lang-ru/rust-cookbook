@@ -2,7 +2,7 @@
 
 [![unicode-segmentation-badge]](https://docs.rs/unicode-segmentation/1.2.1/unicode_segmentation/) [![cat-text-processing-badge]][cat-text-processing]
 
-Собрать отдельные Unicode графемы из строки UTF-8, используя функцию [`UnicodeSegmentation::graphemes`](https://docs.rs/unicode-segmentation/*/unicode_segmentation/trait.UnicodeSegmentation.html#tymethod.graphemes) из крейта [`unicode-segmentation`].
+Здесь отдельные Unicode графемы из строки UTF-8 собираются вместе, используя функцию [`UnicodeSegmentation::graphemes`](https://docs.rs/unicode-segmentation/*/unicode_segmentation/trait.UnicodeSegmentation.html#tymethod.graphemes) из крейта [`unicode-segmentation`].
 
 ```rust
 #[macro_use]
