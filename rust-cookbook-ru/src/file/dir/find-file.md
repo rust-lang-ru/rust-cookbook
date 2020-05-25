@@ -2,7 +2,7 @@
 
 [![walkdir-badge]][walkdir] [![cat-filesystem-badge]][cat-filesystem]
 
-Найти JSON файлы, измененные за последний день в текущем каталоге. Использование метода [`follow_links`](https://docs.rs/walkdir/*/walkdir/struct.WalkDir.html#method.follow_links) гарантирует, что символические ссылки будут пройдены, как если бы они были обычными каталогами и файлами.
+Найти JSON файлы, изменённые за последний день в текущем каталоге. Использование метода [`follow_links`](https://docs.rs/walkdir/*/walkdir/struct.WalkDir.html#method.follow_links) гарантирует, что символические ссылки будут пройдены, как если бы они были обычными каталогами и файлами.
 
 ```rust,no_run
 # #[macro_use]

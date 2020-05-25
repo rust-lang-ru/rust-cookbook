@@ -2,7 +2,7 @@
 
 [![same_file-badge]][same_file] [![cat-filesystem-badge]][cat-filesystem]
 
-Используйте [`same_file::is_same_file`](https://docs.rs/same-file/*/same_file/fn.is_same_file.html) для обнаружения зацикливания по заданному пути. Например, цикл может быть создан в системе Unix через символические ссылки:
+Используется [`same_file::is_same_file`](https://docs.rs/same-file/*/same_file/fn.is_same_file.html) для обнаружения зацикливания по заданному пути. Например, цикл может быть создан в системе Unix через символические ссылки:
 
 ```bash
 mkdir -p /tmp/foo/bar/baz

@@ -2,7 +2,7 @@
 
 [![std-badge]][std] [![cat-filesystem-badge]][cat-filesystem]
 
-Записывает в файл сообщение из трех строк, а затем читает его обратно по строчке за раз с помощью итератора [`Lines`], созданного с помощью [`BufRead::lines`]. [`File`] реализует [`Read`], который предоставляет типаж [`BufReader`]. Метод [`File::create`] открывает [`File`](https://doc.rust-lang.org/std/fs/struct.File.html) для записи, а [`File::open`] для чтения.
+Записывает в файл сообщение из трёх строк, а затем читает его обратно по строчке за раз с помощью итератора [`Lines`], созданного с помощью [`BufRead::lines`]. [`File`] реализует [`Read`], который предоставляет типаж [`BufReader`]. Метод [`File::create`] открывает [`File`](https://doc.rust-lang.org/std/fs/struct.File.html) для записи, а [`File::open`] для чтения.
 
 ```rust
 use std::fs::File;

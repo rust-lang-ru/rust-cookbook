@@ -4,7 +4,7 @@
 
 Используется [`filter_entry`](https://docs.rs/walkdir/*/walkdir/struct.IntoIter.html#method.filter_entry) для рекурсивного обхода записей, передавая предикат `is_not_hidden` для пропуска скрытых файлов и каталогов. Метод [`Iterator::filter`] применяется к каждому [`WalkDir::DirEntry`](https://docs.rs/walkdir/*/walkdir/struct.DirEntry.html), даже если родительский объект является скрытым каталогом.
 
-Корневой каталог `"."` передается в использование методом [`WalkDir::depth`](https://docs.rs/walkdir/*/walkdir/struct.DirEntry.html#method.depth) в предикате `is_not_hidden` .
+Корневой каталог `"."` передаётся в использование методом [`WalkDir::depth`](https://docs.rs/walkdir/*/walkdir/struct.DirEntry.html#method.depth) в предикате `is_not_hidden` .
 
 ```rust,no_run
 extern crate walkdir;

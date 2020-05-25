@@ -2,7 +2,7 @@
 
 [![walkdir-badge]][walkdir] [![cat-filesystem-badge]][cat-filesystem]
 
-Глубина рекурсии может быть гибко установлена методами [`WalkDir::min_depth`](https://docs.rs/walkdir/*/walkdir/struct.WalkDir.html#method.min_depth) и [`WalkDir::max_depth`](https://docs.rs/walkdir/*/walkdir/struct.WalkDir.html#method.max_depth). Вычисление суммы всех размеров файлов до глубины под папок в 3 уровня, игнорируя файлы в корневой папке.
+Глубина рекурсии может быть гибко установлена методами [`WalkDir::min_depth`](https://docs.rs/walkdir/*/walkdir/struct.WalkDir.html#method.min_depth) и [`WalkDir::max_depth`](https://docs.rs/walkdir/*/walkdir/struct.WalkDir.html#method.max_depth). Вычисление суммы всех размеров файлов до глубины под папок в 3 уровня, игнорируя файлы в корневом каталоге.
 
 ```rust
 extern crate walkdir;
