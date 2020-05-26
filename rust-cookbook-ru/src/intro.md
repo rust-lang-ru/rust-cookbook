@@ -6,7 +6,7 @@
 
 ## Соавторам
 
-Этот проект подразумевает лёгкость вхождения для новичков в программировании на [Rust], а также является одним из самых лёгких путей, чтобы быть вовлечённым в Rust-сообщество. Помощь всегда приветствуется. Подробнее смотрите [CONTRIBUTING.md](https://github.com/rust-lang-nursery/rust-cookbook/blob/master/CONTRIBUTING.md")
+Этот проект подразумевает лёгкость вхождения для новичков в программировании на [Rust], а также является одним из самых лёгких путей, чтобы быть вовлечённым в Rust-сообщество. Помощь всегда приветствуется. Подробнее смотрите [CONTRIBUTING.md](https://github.com/rust-lang-nursery/rust-cookbook/blob/master/CONTRIBUTING.md%22)
 
 {{#include algorithms.md}}
 
