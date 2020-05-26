@@ -2,7 +2,7 @@
 
 [![log-badge]][log] [![env_logger-badge]][env_logger] [![chrono-badge]][chrono] [![cat-debugging-badge]][cat-debugging]
 
-Создает пользовательскую конфигурацию логгера с помощью [`Builder`].
+Создаёт пользовательскую конфигурацию логгера с помощью [`Builder`].
 Каждая запись в журнале вызывает [`Local::now`] для получения текущего
 [`DateTime`] в местном часовом поясе и использует метод [`DateTime::format`]
  со [`strftime::specifiers`] для форматирования метки времени, используемой в конечном журнале.
