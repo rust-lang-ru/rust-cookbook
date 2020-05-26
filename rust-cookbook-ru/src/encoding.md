@@ -2,7 +2,7 @@
 
 Рецепт | Крейты | Категории
 --- | --- | ---
-[%-кодирование строки] | [![url-badge]][url] | [![cat-encoding-badge]][cat-encoding]
+[%-кодирование строки] | [![percent-encoding-badge]][url] | [![cat-encoding-badge]][cat-encoding]
 [Кодирование строки как application/x-www-form-urlencoded] | [![url-badge]][url] | [![cat-encoding-badge]][cat-encoding]
 [Кодирование и декодирование шестнадцатеричного представления] | [![data-encoding-badge]][data-encoding] | [![cat-encoding-badge]][cat-encoding]
 [Кодирование и декодирования представления в base64] | [![base64-badge]][base64] | [![cat-encoding-badge]][cat-encoding]
