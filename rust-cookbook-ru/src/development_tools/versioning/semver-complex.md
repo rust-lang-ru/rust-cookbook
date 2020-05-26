@@ -2,9 +2,12 @@
 
 [![semver-badge]][semver] [![cat-config-badge]][cat-config]
 
-Строит [`semver::Version`](https://docs.rs/semver/*/semver/struct.Version.html) из строки используя [`Version::parse`](https://docs.rs/semver/*/semver/struct.Version.html#method.parse). Строка содержит номер пре-релиза и метаданные сборки как определяется в спецификации [Semantic Versioning Specification].
+Строит [`semver::Version`] из строки используя [`Version::parse`]. Строка содержит номер
+пре-релиза и метаданные сборки как определяется в спецификации [Semantic Versioning Specification].
 
-Заметим, что в соответствии со спецификации метаданные сборки анализируются, но не принимаются во внимание в процессе сравнения версий. Другими словами, две версии могут быть равны даже если их данные сборки различаются.
+Заметим, что в соответствии со спецификации метаданные сборки анализируются, но не
+принимаются во внимание в процессе сравнения версий. Другими словами, две версии могут
+быть равны даже если их данные сборки различаются.
 
 ```rust
 extern crate semver;
@@ -37,5 +40,7 @@ fn main() -> Result<(), SemVerError> {
 }
 ```
 
+[`semver::Version`]: https://docs.rs/semver/*/semver/struct.Version.html
+[`Version::parse`]: https://docs.rs/semver/*/semver/struct.Version.html#method.parse
 
-[Semantic Versioning Specification]: https://docs.rs/semver/*/semver/struct.Version.html
+[Semantic Versioning Specification]: http://semver.org/

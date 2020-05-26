@@ -2,7 +2,9 @@
 
 [![log-badge]][log] [![cat-debugging-badge]][cat-debugging]
 
-Реализует особый логгер в консоль `ConsoleLogger`, который печатает в стандартный вывод. Чтобы иметь возможность использовать макросы для логгеров, `ConsoleLogger` реализует типаж [`log::Log`](https://docs.rs/log/*/log/trait.Log.html). Вызов функции [`log::set_logger`](https://docs.rs/log/*/log/fn.set_logger.html) подключает логгер.
+Реализует особый логгер в консоль `ConsoleLogger`, который печатает в стандартный вывод.
+Чтобы иметь возможность использовать макросы для логгеров, `ConsoleLogger` реализует типаж
+[`log::Log`]. Вызов функции [`log::set_logger`] подключает логгер.
 
 ```rust
 #[macro_use]
@@ -39,4 +41,5 @@ fn main() -> Result<(), SetLoggerError> {
 }
 ```
 
-
+[`log::Log`]: https://docs.rs/log/*/log/trait.Log.html
+[`log::set_logger`]: https://docs.rs/log/*/log/fn.set_logger.html

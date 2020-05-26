@@ -2,7 +2,9 @@
 
 [![semver-badge]][semver] [![cat-config-badge]][cat-config]
 
-Дан список версий в виде &str, найти самую последнюю версию [`semver::Version`](https://docs.rs/semver/*/semver/struct.Version.html). Тип [`semver::VersionReq`](https://docs.rs/semver/*/semver/struct.VersionReq.html) фильтрует список с помощью метода [`VersionReq::matches`](https://docs.rs/semver/*/semver/struct.VersionReq.html#method.matches). Также демонстрируется `semver` настройки для пре-релиза.
+Дан список версий в виде &str, найти самую последнюю версию [`semver::Version`].
+Тип [`semver::VersionReq`] фильтрует список с помощью метода [`VersionReq::matches`].
+Также демонстрируется `semver` настройки для пре-релиза.
 
 ```rust
 # #[macro_use]
@@ -57,4 +59,6 @@ fn main() -> Result<()> {
 }
 ```
 
-
+[`semver::Version`]: https://docs.rs/semver/*/semver/struct.Version.html
+[`semver::VersionReq`]: https://docs.rs/semver/*/semver/struct.VersionReq.html
+[`VersionReq::matches`]: https://docs.rs/semver/*/semver/struct.VersionReq.html#method.matches

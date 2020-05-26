@@ -2,7 +2,7 @@
 
 [![semver-badge]][semver] [![cat-config-badge]][cat-config]
 
-Даны две версии, [`is_prerelease`](https://docs.rs/semver/*/semver/struct.Version.html#method.is_prerelease) проверяет, что одна является пре-релизом, а вторая - нет.
+Даны две версии, [`is_prerelease`] проверяет, что одна является пре-релизом, а вторая - нет.
 
 ```rust
 extern crate semver;
@@ -20,4 +20,4 @@ fn main() -> Result<(), SemVerError> {
 }
 ```
 
-
+[`is_prerelease`]: https://docs.rs/semver/*/semver/struct.Version.html#method.is_prerelease

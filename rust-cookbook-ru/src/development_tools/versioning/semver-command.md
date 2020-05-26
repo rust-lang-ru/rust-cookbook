@@ -2,7 +2,10 @@
 
 [![semver-badge]][semver] [![cat-text-processing-badge]][cat-text-processing] [![cat-os-badge]][cat-os]
 
-Код в рецепте выполняет `git --version` используя [`Command`] а затем анализирует номер версии и преобразует в [`semver::Version`](https://docs.rs/semver/*/semver/struct.Version.html) используя [`Version::parse`](https://docs.rs/semver/*/semver/struct.Version.html#method.parse). Метод [`VersionReq::matches`](https://docs.rs/semver/*/semver/struct.VersionReq.html#method.matches) сравнивает требуемую версию [`semver::VersionReq`](https://docs.rs/semver/*/semver/struct.VersionReq.html) с только что полученной версией. Вывод программы напоминает результат "git version x.y.z".
+Код в рецепте выполняет `git --version` используя [`Command`] а затем анализирует
+номер версии и преобразует в [`semver::Version`] используя [`Version::parse`]. 
+Метод [`VersionReq::matches`] сравнивает требуемую версию [`semver::VersionReq`]
+с только что полученной версией. Вывод программы напоминает результат "git version x.y.z".
 
 ```rust,no_run
 # #[macro_use]
@@ -45,5 +48,8 @@ fn main() -> Result<()> {
 }
 ```
 
-
 [`Command`]: https://doc.rust-lang.org/std/process/struct.Command.html
+[`semver::Version`]: https://docs.rs/semver/*/semver/struct.Version.html
+[`semver::VersionReq`]: https://docs.rs/semver/*/semver/struct.VersionReq.html
+[`Version::parse`]: https://docs.rs/semver/*/semver/struct.Version.html#method.parse
+[`VersionReq::matches`]: https://docs.rs/semver/*/semver/struct.VersionReq.html#method.matches

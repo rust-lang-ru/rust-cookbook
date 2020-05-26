@@ -2,7 +2,8 @@
 
 [![log-badge]][log] [![env_logger-badge]][env_logger] [![cat-debugging-badge]][cat-debugging]
 
-Пример создаёт особую конфигурацию логгера используя [`Builder::target`](https://docs.rs/env_logger/*/env_logger/struct.Builder.html#method.target), чтобы установить стандартный вывод для логирования в [`Target::Stdout`](https://docs.rs/env_logger/*/env_logger/fmt/enum.Target.html).
+Пример создаёт особую конфигурацию логгера используя [`Builder::target`], 
+чтобы установить стандартный вывод для логирования в [`Target::Stdout`].
 
 ```rust
 #[macro_use]
@@ -20,4 +21,5 @@ fn main() {
 }
 ```
 
-
+[`Builder::target`]: https://docs.rs/env_logger/*/env_logger/struct.Builder.html#method.target
+[`Target::Stdout`]: https://docs.rs/env_logger/*/env_logger/fmt/enum.Target.html

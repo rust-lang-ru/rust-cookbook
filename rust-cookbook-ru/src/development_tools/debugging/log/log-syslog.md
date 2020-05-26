@@ -2,7 +2,10 @@
 
 [![log-badge]][log] [![syslog-badge]][syslog] [![cat-debugging-badge]][cat-debugging]
 
-Код в примере выводит сообщения в [UNIX syslog]. Инициализируется движок логгирования через [`syslog::init`](https://docs.rs/syslog/*/syslog/fn.init.html). Объект [`syslog::Facility`](https://docs.rs/syslog/*/syslog/enum.Facility.html) регистрирует программу путём передачи класса логирования, [`log::LevelFilter`](https://docs.rs/log/*/log/enum.LevelFilter.html) определяет уровень логирования, через `Option<&str>` передаётся необязательное имя программы.
+Код в примере выводит сообщения в [UNIX syslog]. Инициализируется движок логирования
+через [`syslog::init`]. Объект [`syslog::Facility`] регистрирует программу путём передачи
+класса логирования, [`log::LevelFilter`] определяет уровень логирования, через `Option<&str>`
+передаётся необязательное имя программы.
 
 ```rust
 #[macro_use]
@@ -29,5 +32,8 @@ fn main() -> Result<(), Error> {
 # }
 ```
 
+[`log::LevelFilter`]: https://docs.rs/log/*/log/enum.LevelFilter.html
+[`syslog::Facility`]: https://docs.rs/syslog/*/syslog/enum.Facility.html
+[`syslog::init`]: https://docs.rs/syslog/*/syslog/fn.init.html
 
-[UNIX syslog]: https://docs.rs/log/*/log/enum.LevelFilter.html
+[UNIX syslog]: https://www.gnu.org/software/libc/manual/html_node/Overview-of-Syslog.html
