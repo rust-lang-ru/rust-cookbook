@@ -2,9 +2,12 @@
 
 [![semver-badge]][semver] [![cat-config-badge]][cat-config]
 
-Пример строит [`semver::Version`](https://docs.rs/semver/*/semver/struct.Version.html) из строкового значения используя [`Version::parse`](https://docs.rs/semver/*/semver/struct.Version.html#method.parse), затем осуществляет инкремент номера патча, минорного и мажорного номера версии один за одним.
+Пример строит [`semver::Version`] из строкового значения используя [`Version::parse`],
+ затем осуществляет инкремент номера патча, минорного и мажорного номера версии один за одним.
 
-Заметим, что в соответствии со спецификацией [Semantic Versioning Specification] увеличение минорного номера версии сбрасывает счётчик патча на 0. Аналогично увеличение мажорного номера версии сбрасывает и минорный номер и номер патча на 0.
+Заметим, что в соответствии со спецификацией [Semantic Versioning Specification]
+увеличение минорного номера версии сбрасывает счётчик патча на 0. Аналогично увеличение
+мажорного номера версии сбрасывает и минорный номер и номер патча на 0.
 
 ```rust
 extern crate semver;
@@ -41,5 +44,7 @@ fn main() -> Result<(), SemVerError> {
 }
 ```
 
+[`semver::Version`]: https://docs.rs/semver/*/semver/struct.Version.html
+[`Version::parse`]: https://docs.rs/semver/*/semver/struct.Version.html#method.parse
 
-[Semantic Versioning Specification]: https://docs.rs/semver/*/semver/struct.Version.html
+[Semantic Versioning Specification]: http://semver.org/

@@ -2,11 +2,19 @@
 
 [![cc-badge]][cc] [![cat-development-tools-badge]][cat-development-tools]
 
-Чтобы покрыть сценарии, где требуется использовать дополнительный код на C, C++ или ассемблере, есть крейт [**cc**][cc], который предлагает простой API для компиляции включённого в проект кода на C/C++/asm в статические библиотеки (**.a**), которые затем могут быть статически скомпонованы **rustc**.
+Чтобы покрыть сценарии, где требуется использовать дополнительный код на C, C++ или ассемблере, 
+есть крейт [**cc**][cc], который предлагает простой API для компиляции включённого в проект кода 
+на C/C++/asm в статические библиотеки (**.a**), которые затем могут быть статически скомпонованы **rustc**.
 
-Следующий пример содержит некоторый код на C (**src/hello.c**) который будет использован в Rust коде. Перед компиляцией кода на Rust файл запускается специальный "build" файл (**build.rs**), определённый в **Cargo.toml**. Используя крейт [**cc**][cc] будет создана статическая библиотека (в данном случае **libhello.a**, смотрите [`compile` docs](https://docs.rs/cc/*/cc/struct.Build.html#method.compile)), которая затем может быть использована из кода на Rust с помощью декларации сигнатуры внешней функции в блоке `extern`.
+Следующий пример содержит некоторый код на C (**src/hello.c**) который будет использован в Rust 
+коде. Перед компиляцией кода на Rust файл запускается специальный "build" файл (**build.rs**), 
+определённый в **Cargo.toml**. Используя крейт [**cc**][cc] будет создана статическая библиотека 
+(в данном случае **libhello.a**, смотрите [`compile` docs][cc-build-compile]), которая затем может быть использована из кода на Rust с помощью декларации сигнатуры внешней функции в блоке `extern`.
 
-Поскольку включённый код на C очень простой, нужен только один файл с исходным кодом нужен для передачи в [`cc::Build`](https://docs.rs/cc/*/cc/struct.Build.html). В случае более сложных сценариев, [`cc::Build`](https://docs.rs/cc/*/cc/struct.Build.html) предлагает полный набор возможностей для определения [`include`](https://docs.rs/cc/*/cc/struct.Build.html#method.include) путей и флагов [`flag`](https://docs.rs/cc/*/cc/struct.Build.html#method.flag) для внешнего компилятора.
+Поскольку включённый код на C очень простой, нужен только один файл с исходным кодом нужен для 
+передачи в [`cc::Build`][cc-build]. В случае более сложных сценариев, [`cc::Build`][cc-build] предлагает 
+полный набор возможностей для определения [`include`][cc-build-include] 
+ путей и флагов [`flag`][cc-build-flag] для внешнего компилятора.
 
 ### `Cargo.toml`
 
@@ -86,4 +94,10 @@ fn main() -> Result<()> {
 }
 ```
 
-
+[`cc::Build::define`]: https://docs.rs/cc/*/cc/struct.Build.html#method.define
+[`Option`]: https://doc.rust-lang.org/std/option/enum.Option.html
+[cc-build-compile]: https://docs.rs/cc/*/cc/struct.Build.html#method.compile
+[cc-build-cpp]: https://docs.rs/cc/*/cc/struct.Build.html#method.cpp
+[cc-build-flag]: https://docs.rs/cc/*/cc/struct.Build.html#method.flag
+[cc-build-include]: https://docs.rs/cc/*/cc/struct.Build.html#method.include
+[cc-build]: https://docs.rs/cc/*/cc/struct.Build.html
