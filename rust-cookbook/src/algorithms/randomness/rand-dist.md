@@ -4,7 +4,7 @@
 
 By default, random numbers in the `rand` crate have
 [uniform distribution]. The [`rand_distr`] crate provides
-other kinds of distrubutions. To use them, you instantiate
+other kinds of distributions. To use them, you instantiate
 a distribution, then sample from that distribution using
 [`Distribution::sample`] with help of a random-number
 generator [`rand::Rng`].
@@ -14,9 +14,10 @@ An example using the [`Normal`] distribution is shown below.
 
 ```rust,edition2018,ignore
 use rand_distr::{Distribution, Normal, NormalError};
+use rand::thread_rng;
 
 fn main() -> Result<(), NormalError> {
-    let mut rng = rand::thread_rng();
+    let mut rng = thread_rng();
     let normal = Normal::new(2.0, 3.0)?;
     let v = normal.sample(&mut rng);
     println!("{} is from a N(2, 9) distribution", v);
