@@ -6,24 +6,19 @@
 
 Объект [`reqwest::Client`](https://docs.rs/reqwest/*/reqwest/struct.Client.html) отвечает за детали для обоих типов запросов выше, детали включают URL адрес, тело запроса и аутентификацию. Тело POST-запроса как JSON можно подготовить с помощью макроса [`serde_json::json!`](https://docs.rs/serde_json/*/serde_json/macro.json.html). Вызов [`RequestBuilder::json`](https://docs.rs/reqwest/*/reqwest/struct.RequestBuilder.html#method.json) определяет тело запроса. [`RequestBuilder::basic_auth`](https://docs.rs/reqwest/*/reqwest/struct.RequestBuilder.html#method.basic_auth) управляет аутентификацией. А вызов [`RequestBuilder::send`](https://docs.rs/reqwest/*/reqwest/struct.RequestBuilder.html#method.send) синхронно выполняет созданные запросы.
 
-```rust,no_run
-# #[macro_use]
-# extern crate error_chain;
-extern crate reqwest;
-#[macro_use]
-extern crate serde_derive;
-#[macro_use]
-extern crate serde_json;
-
+```rust,edition2018,no_run
+use error_chain::error_chain;
+use serde::Deserialize;
+use serde_json::json;
 use std::env;
 use reqwest::Client;
-#
-# error_chain! {
-#     foreign_links {
-#         EnvVar(env::VarError);
-#         HttpRequest(reqwest::Error);
-#     }
-# }
+
+error_chain! {
+    foreign_links {
+        EnvVar(env::VarError);
+        HttpRequest(reqwest::Error);
+    }
+}
 
 #[derive(Deserialize, Debug)]
 struct Gist {
@@ -31,7 +26,8 @@ struct Gist {
     html_url: String,
 }
 
-fn main() -> Result<()> {
+#[tokio::main]
+async fn main() ->  Result<()> {
     let gh_user = env::var("GH_USER")?;
     let gh_pass = env::var("GH_PASS")?;
 
@@ -45,20 +41,20 @@ fn main() -> Result<()> {
         }});
 
     let request_url = "https://api.github.com/gists";
-    let mut response = Client::new()
+    let response = Client::new()
         .post(request_url)
         .basic_auth(gh_user.clone(), Some(gh_pass.clone()))
         .json(&gist_body)
-        .send()?;
+        .send().await?;
 
-    let gist: Gist = response.json()?;
+    let gist: Gist = response.json().await?;
     println!("Created {:?}", gist);
 
     let request_url = format!("{}/{}",request_url, gist.id);
     let response = Client::new()
         .delete(&request_url)
         .basic_auth(gh_user, Some(gh_pass))
-        .send()?;
+        .send().await?;
 
     println!("Gist {} deleted! Status code: {}",gist.id, response.status());
     Ok(())
