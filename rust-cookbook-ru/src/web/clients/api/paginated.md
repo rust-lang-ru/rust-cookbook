@@ -4,11 +4,9 @@
 
 Пример оборачивает метода веб интерфейса в удобный итератор на Rust. Этот итератор лениво запрашивает следующую страницу результатов от удалённого сервера по достижении конца каждой страницы.
 
-```rust,no_run
-#[macro_use]
-extern crate serde_derive;
-extern crate reqwest;
-use reqwest::Error;
+```rust,edition2018,no_run
+use reqwest::Result;
+use serde::Deserialize;
 
 #[derive(Deserialize)]
 struct ApiResponse {
@@ -29,25 +27,25 @@ struct Meta {
 struct ReverseDependencies {
     crate_id: String,
     dependencies: <Vec<Dependency> as IntoIterator>::IntoIter,
-    client: reqwest::Client,
+    client: reqwest::blocking::Client,
     page: u32,
     per_page: u32,
     total: u32,
 }
 
 impl ReverseDependencies {
-    fn of(crate_id: &str) -> Result<Self, Error> {
+    fn of(crate_id: &str) -> Result<Self> {
         Ok(ReverseDependencies {
                crate_id: crate_id.to_owned(),
                dependencies: vec![].into_iter(),
-               client: reqwest::Client::new(),
+               client: reqwest::blocking::Client::new(),
                page: 0,
                per_page: 100,
                total: 0,
            })
     }
 
-    fn try_next(&mut self) -> Result<Option<Dependency>, Error> {
+    fn try_next(&mut self) -> Result<Option<Dependency>> {
         if let Some(dep) = self.dependencies.next() {
             return Ok(Some(dep));
         }
@@ -70,7 +68,7 @@ impl ReverseDependencies {
 }
 
 impl Iterator for ReverseDependencies {
-    type Item = Result<Dependency, Error>;
+    type Item = Result<Dependency>;
 
     fn next(&mut self) -> Option<Self::Item> {
         match self.try_next() {
@@ -81,7 +79,7 @@ impl Iterator for ReverseDependencies {
     }
 }
 
-fn main() -> Result<(), Error> {
+fn main() -> Result<()> {
     for dep in ReverseDependencies::of("serde")? {
         println!("reverse dependency: {}", dep?.crate_id);
     }
