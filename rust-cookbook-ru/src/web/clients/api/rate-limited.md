@@ -2,9 +2,9 @@
 
 [![reqwest-badge]][reqwest] [![hyper-badge]][hyper] [![cat-net-badge]][cat-net]
 
-Этот пример использует API сервиса GitHub (который имеет ограничение на частоту обращения) в качестве образца того, как можно обрабатывать ошибки от сервера. Пример использует [`hyper::header!`](https://doc.servo.org/hyper/header/index.html#defining-custom-headers) макрос чтобы разобрать заголовок ответа и проверяет его на наличие [`reqwest::StatusCode::Forbidden`](https://docs.rs/reqwest/*/reqwest/struct.StatusCode.html#associatedconstant.FORBIDDEN). Если ответ сигнализирует о превышении допустимой частоты запросов, код ожидает некоторое время, и возобновляет запросы.
+Этот пример использует API сервиса GitHub (который имеет ограничение на частоту обращения) в качестве образца того, как можно обрабатывать ошибки от сервера. Пример использует  макрос [`hyper::header!`](https://doc.servo.org/hyper/header/index.html#defining-custom-headers) чтобы разобрать заголовок ответа и проверяет его на наличие [`reqwest::StatusCode::Forbidden`](https://docs.rs/reqwest/*/reqwest/struct.StatusCode.html#associatedconstant.FORBIDDEN). Если ответ сигнализирует о превышении допустимой частоты запросов, код ожидает некоторое время, и возобновляет запросы.
 
-```rust,no_run,ignore
+```rust,edition2018,no_run
 # #[macro_use]
 # extern crate error_chain;
 #[macro_use]
