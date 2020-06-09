@@ -4,7 +4,7 @@
 
 Пример генерирует случайные числа из полуоткрытого диапазона `[0, 10)` (не включающего `10`) с помощью метода [`Rng::gen_range`](https://doc.rust-lang.org/rand/*/rand/trait.Rng.html#method.gen_range).
 
-```rust,ignore
+```rust,edition2018
 extern crate rand;
 
 use rand::Rng;
@@ -18,7 +18,7 @@ fn main() {
 
 [`Uniform`](https://docs.rs/rand/*/rand/distributions/uniform/struct.Uniform.html) задаёт [равномерное распределение](https://en.wikipedia.org/wiki/Uniform_distribution_(continuous)). Его использование работает точно так же, но может работать быстрее, когда нам нужно генерировать числа из данного диапазона много раз.
 
-```rust,ignore
+```rust,edition2018
 extern crate rand;
 
 
