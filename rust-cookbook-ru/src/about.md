@@ -33,19 +33,26 @@
 [![rand-badge]][rand] [![cat-science-badge]][cat-science]
 
 ```rust
-extern crate rand; use rand::Rng;  fn main() {     let mut rng = rand::thread_rng();     println!("Random f64: {}", rng.gen::<f64>()); }
+extern crate rand;
+use rand::Rng;
+fn main() {
+    let mut rng = rand::thread_rng();
+    println!("Random f64: {}", rng.gen::<f64>());
+}
 ```
 
 Чтобы "поиграться" с ним локально, вам нужно запустить следующие команды для создания нового cargo-проекта (cargo - это пакетный менеджер для Rust) и перейти внутрь только что созданного проекта:
 
 ```sh
-cargo new my-example --bin cd my-example
+cargo new my-example --bin
+cd my-example
 ```
 
 Теперь вам также нужно добавить все необходимые крейты в файл `Cargo.toml`, как показано в "шильдиках", в данном случае просто rand. Чтобы это сделать, используйте команду `cargo add`, которая реализована в крейте [`cargo-edit`] и вам его нужно сначала установить:
 
 ```sh
-cargo install cargo-edit cargo add rand
+cargo install cargo-edit
+cargo add rand
 ```
 
 Теперь вы можете заменить содержимое файла `src/main.rs` на полностью скопированное из рецепта и запустить этот код:
@@ -67,7 +74,25 @@ cargo run
 Обычно структура примеров выглядит как-то так:
 
 ```rust
-#[macro_use] extern crate error_chain;  use std::net::IpAddr; use std::str;  error_chain! {     foreign_links {         Utf8(std::str::Utf8Error);         AddrParse(std::net::AddrParseError);     } }  fn main() -> Result<()> {     let bytes = b"2001:db8::1";      // Bytes to string.     let s = str::from_utf8(bytes)?;      // String to IP address.     let addr: IpAddr = s.parse()?;      println!("{:?}", addr);     Ok(()) }
+#[macro_use]
+extern crate error_chain;
+use std::net::IpAddr;
+use std::str;
+error_chain! {
+    foreign_links {
+        Utf8(std::str::Utf8Error);
+        AddrParse(std::net::AddrParseError);
+    }
+}
+fn main() -> Result<()> {
+    let bytes = b"2001:db8::1";
+    // Bytes to string.
+    let s = str::from_utf8(bytes)?;
+    // String to IP address.
+    let addr: IpAddr = s.parse()?;
+    println!("{:?}", addr);
+    Ok(())
+}
 ```
 
 Этот пример использует макрос `error_chain!` чтобы определить пользовательские типы `Error` и `Result`, наряду с автоматическими преобразованиями для типов ошибок из стандартной библиотеки. Такие автоматические преобразования позволят работать оператору `?`.
@@ -75,7 +100,22 @@ cargo run
 Для целей повышения читаемости механический код связанный с обработкой ошибок по умолчанию скрыт. Чтобы посмотреть полное содержимое примера, нажмите на кнопку "expand" (<i class="fa fa-expand">), помещённую в верхнем левом углу фрагмента кода.</i>
 
 ```rust
-# #[macro_use] # extern crate error_chain; extern crate url;  use url::{Url, Position}; # # error_chain! { #     foreign_links { #         UrlParse(url::ParseError); #     } # }  fn main() -> Result<()> {     let parsed = Url::parse("https://httpbin.org/cookies/set?k2=v2&k1=v1")?;     let cleaned: &str = &parsed[..Position::AfterPath];     println!("cleaned: {}", cleaned);     Ok(()) }
+# #[macro_use]
+# extern crate error_chain;
+extern crate url;
+use url::{Url, Position};
+#
+# error_chain! {
+#     foreign_links {
+#         UrlParse(url::ParseError);
+#     }
+# }
+fn main() -> Result<()> {
+    let parsed = Url::parse("https://httpbin.org/cookies/set?k2=v2&k1=v1")?;
+    let cleaned: &str = &parsed[..Position::AfterPath];
+    println!("cleaned: {}", cleaned);
+    Ok(())
+}
 ```
 
 Для более глубокого изучения обработки ошибок в Rust, читайте [эту главу в Rust book], [этот блог пост], (и документацию по крейту https://docs.rs/snafu/0.1.4/snafu/ - прим. перев.)
