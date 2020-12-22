@@ -4,9 +4,7 @@
 
 Пример случайно генерирует строку заданной длины из ASCII символов по заданному пользователем байтовой строки с помощью [`gen_range`](https://docs.rs/rand/*/rand/trait.Rng.html#method.gen_range).
 
-```rust
-extern crate rand;
-
+```rust,edition2018
 fn main() {
     use rand::Rng;
     const CHARSET: &[u8] = b"ABCDEFGHIJKLMNOPQRSTUVWXYZ\
