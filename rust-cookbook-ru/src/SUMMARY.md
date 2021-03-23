@@ -64,5 +64,5 @@
     - [Клиенты](web/clients.md)
         - [Создание запросов](web/clients/requests.md)
         - [Вызов Web API](web/clients/apis.md)
-        - [Downloads](web/clients/download.md)
-        - [Web Authentication](web/clients/authentication.md)
+        - [Загрузки](web/clients/download.md)
+        - [Аутентификация](web/clients/authentication.md)
