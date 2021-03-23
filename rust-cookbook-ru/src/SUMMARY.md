@@ -1,7 +1,6 @@
 # Оглавление
 
-[Оглавление](intro.md)
-[О книге](about.md)
+[Оглавление](intro.md) [О книге](about.md)
 
 - [Алгоритмы](algorithms.md)
     - [Генерация случайных значений](algorithms/randomness.md)
@@ -65,4 +64,5 @@
     - [Клиенты](web/clients.md)
         - [Создание запросов](web/clients/requests.md)
         - [Вызов Web API](web/clients/apis.md)
-        - [Загрузки](web/clients/download.md)
+        - [Downloads](web/clients/download.md)
+        - [Web Authentication](web/clients/authentication.md)
