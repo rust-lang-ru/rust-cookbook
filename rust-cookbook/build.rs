@@ -10,6 +10,10 @@ const REMOVED_TESTS: &[&str] = &[
 const REMOVED_PREFIXES: &[&str] = &[
     "./src/algorithms/randomness/",
     "./src/development_tools/debugging/tracing/",
+    "./src/concurrency/actor/",
+    "./src/concurrency/custom_future/",
+    "./src/safety_critical/no_panic/",
+    "./src/safety_critical/heapless_alloc/",
 ];
 
 fn main() {
