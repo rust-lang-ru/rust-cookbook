@@ -38,6 +38,8 @@ community. It needs and welcomes help. For details see
 
 {{#include encoding.md}}
 
+{{#include errors.md}}
+
 {{#include file.md}}
 
 {{#include hardware.md}}
@@ -47,6 +49,8 @@ community. It needs and welcomes help. For details see
 {{#include net.md}}
 
 {{#include os.md}}
+
+{{#include parsing.md}}
 
 {{#include science.md}}
 

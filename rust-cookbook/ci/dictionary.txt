@@ -20,6 +20,8 @@ APIs
 appender
 Appender
 applicationx
+arcmutext
+arcrwlockt
 args
 AsRef
 AsyncRead
@@ -29,6 +31,8 @@ asyncwrite
 ascii
 ashley
 async
+AtomicUsize
+atomicusize
 attr
 auth
 Auth
@@ -65,7 +69,10 @@ chrono
 ClientBuilder
 CmdError
 colombo
+combinators
 concat
+Condvar
+condvar
 config
 Config
 ConsoleLogger
@@ -111,6 +118,7 @@ EnvVar
 eprintln
 ErrorKind
 extern
+fallbacks
 ferris
 FileAppender
 filename
@@ -224,6 +232,7 @@ MpscRecv
 multicast
 Mutex
 MutexGuard
+mutex
 myfile
 MyFlags
 Nagle
@@ -301,6 +310,7 @@ rustaceans
 rustc
 rustup
 RwLock
+rwlock
 SecureRandom
 semver
 Semver
