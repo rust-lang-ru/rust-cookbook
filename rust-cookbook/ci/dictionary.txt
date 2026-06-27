@@ -75,6 +75,7 @@ Condvar
 condvar
 config
 Config
+confy
 ConsoleLogger
 const
 ContentRange
@@ -120,6 +121,8 @@ EnvLogger
 EnvVar
 eprintln
 ErrorKind
+exif
+EXIF
 extern
 fallbacks
 ferris
@@ -200,6 +203,7 @@ json
 Json
 JSON
 julia
+kamadak
 lang
 lazycell
 LazyCell
@@ -308,6 +312,7 @@ resize
 resized
 RESTful
 ReverseDependencies
+rodio
 rusqlite
 rustaceans
 rustc
@@ -352,6 +357,7 @@ subprocess
 subtype
 sydney
 symlinks
+symphonia
 syslog
 SyslogError
 SystemRandom

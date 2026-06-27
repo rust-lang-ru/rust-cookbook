@@ -35,6 +35,8 @@ Keep lines sorted.
 [cat-filesystem]: https://crates.io/categories/filesystem
 [cat-hardware-support-badge]: https://img.shields.io/badge/hardware_support--x.svg?style=social
 [cat-hardware-support]: https://crates.io/categories/hardware-support
+[cat-multimedia-badge]: https://img.shields.io/badge/multimedia--x.svg?style=social
+[cat-multimedia]: https://crates.io/categories/multimedia
 [cat-net-badge]: https://img.shields.io/badge/net--x.svg?style=social
 [cat-net]: https://crates.io/categories/network-programming
 [cat-no-std-badge]: https://img.shields.io/badge/no_std--x.svg?style=social
@@ -76,6 +78,10 @@ Keep lines sorted.
 [chrono]: https://docs.rs/chrono/
 [clap-badge]: https://img.shields.io/crates/v/clap.svg?label=clap
 [clap]: https://docs.rs/clap/
+[config-badge]: https://img.shields.io/crates/v/config.svg?label=config
+[config]: https://docs.rs/config/
+[confy-badge]: https://img.shields.io/crates/v/confy.svg?label=confy
+[confy]: https://docs.rs/confy/
 [crossbeam-badge]: https://img.shields.io/crates/v/crossbeam.svg?label=crossbeam
 [crossbeam]: https://docs.rs/crossbeam/
 [csv-badge]: https://img.shields.io/crates/v/csv.svg?label=csv
@@ -86,6 +92,8 @@ Keep lines sorted.
 [env_logger]: https://docs.rs/env_logger/
 [error-chain-badge]: https://img.shields.io/crates/v/error-chain.svg?label=error-chain
 [error-chain]: https://docs.rs/error-chain/
+[figment-badge]: https://img.shields.io/crates/v/figment.svg?label=figment
+[figment]: https://docs.rs/figment/
 [flate2-badge]: https://img.shields.io/crates/v/flate2.svg?label=flate2
 [flate2]: https://docs.rs/flate2/
 [glob-badge]:https://img.shields.io/crates/v/glob.svg?label=glob
@@ -96,6 +104,8 @@ Keep lines sorted.
 [hyper]: https://docs.rs/hyper/
 [image-badge]: https://img.shields.io/crates/v/image.svg?label=image
 [image]: https://docs.rs/image/
+[kamadak-exif-badge]: https://img.shields.io/crates/v/kamadak-exif.svg?label=kamadak-exif
+[kamadak-exif]: https://docs.rs/kamadak-exif/
 [lazy_static-badge]: https://img.shields.io/crates/v/lazy_static.svg?label=lazy_static
 [lazy_static]: https://docs.rs/lazy_static/
 [leptos-badge]: https://img.shields.io/crates/v/leptos.svg?label=leptos
@@ -145,6 +155,8 @@ Keep lines sorted.
 [reqwest]: https://docs.rs/reqwest/
 [ring-badge]: https://img.shields.io/crates/v/ring.svg?label=ring
 [ring]: https://briansmith.org/rustdoc/ring/
+[rodio-badge]: https://img.shields.io/crates/v/rodio.svg?label=rodio
+[rodio]: https://docs.rs/rodio/
 [rusqlite-badge]: https://img.shields.io/crates/v/rusqlite.svg?label=rusqlite
 [rusqlite]: https://crates.io/crates/rusqlite/
 [same_file-badge]: https://img.shields.io/crates/v/same_file.svg?label=same_file
@@ -163,6 +175,8 @@ Keep lines sorted.
 [sqlx]: https://docs.rs/sqlx/*/sqlx
 [std-badge]: https://img.shields.io/badge/std-1.29.1-blue.svg
 [std]: https://doc.rust-lang.org/std
+[symphonia-badge]: https://img.shields.io/crates/v/symphonia.svg?label=symphonia
+[symphonia]: https://docs.rs/symphonia/
 [syslog-badge]: https://img.shields.io/crates/v/syslog.svg?label=syslog
 [syslog]: https://docs.rs/syslog/
 [tar-badge]: https://img.shields.io/crates/v/tar.svg?label=tar
