@@ -14,73 +14,22 @@ Since the bundled C is very simple, only a single source file needs to be passed
 For more complex build requirements, [`cc::Build`][cc-build] offers a full suite of builder methods for specifying
 [`include`][cc-build-include] paths and extra compiler [`flag`][cc-build-flag]s.
 
-`Cargo.toml`
-
-```toml
-[package]
-...
-build = "build.rs"
-
-[build-dependencies]
-cc = "1"
-
-[dependencies]
-anyhow = "1"
-```
-
 `build.rs`
 
-```rust,edition2018,no_run
-fn main() {
-    cc::Build::new()
-        .file("src/hello.c")
-        .compile("hello");   // outputs `libhello.a`
-}
+```rust
+{{#include ../../../crates/development_tools/build_tools/cc_bundled_static/build.rs }}
 ```
 
 `src/hello.c`
 
 ```c
-#include <stdio.h>
-
-
-void hello() {
-    printf("Hello from C!\n");
-}
-
-void greet(const char* name) {
-    printf("Hello, %s!\n", name);
-}
+{{#include ../../../crates/development_tools/build_tools/cc_bundled_static/src/hello.c }}
 ```
 
 `src/main.rs`
 
-```rust,edition2018,ignore
-use anyhow::Result;
-use std::ffi::CString;
-use std::os::raw::c_char;
-
-fn prompt(s: &str) -> Result<String> {
-    use std::io::Write;
-    print!("{}", s);
-    std::io::stdout().flush()?;
-    let mut input = String::new();
-    std::io::stdin().read_line(&mut input)?;
-    Ok(input.trim().to_string())
-}
-
-extern {
-    fn hello();
-    fn greet(name: *const c_char);
-}
-
-fn main() -> Result<()> {
-    unsafe { hello() }
-    let name = prompt("What's your name? ")?;
-    let c_name = CString::new(name)?;
-    unsafe { greet(c_name.as_ptr()) }
-    Ok(())
-}
+```rust
+{{#include ../../../crates/development_tools/build_tools/cc_bundled_static/src/main.rs }}
 ```
 
 [`cc::Build::define`]: https://docs.rs/cc/*/cc/struct.Build.html#method.define

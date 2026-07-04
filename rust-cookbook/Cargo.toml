@@ -1,5 +1,5 @@
 [workspace]
-members = ["crates/algorithms/*", "crates/concurrency/*", "crates/configuration/*", "crates/development_tools/debugging/tracing", "crates/file/*", "crates/multimedia/*", "crates/parsing/*", "crates/safety_critical/*", "crates/wasm", "crates/web", "xtask"]
+members = ["crates/algorithms/*", "crates/concurrency/*", "crates/configuration/*", "crates/development_tools/build_tools/*", "crates/development_tools/debugging/tracing", "crates/file/*", "crates/multimedia/*", "crates/parsing/*", "crates/safety_critical/*", "crates/wasm", "crates/web", "xtask"]
 exclude = ["crates/database/sea_orm", "crates/database/sqlx", "crates/multimedia/playback", "crates/web_leptos", "crates/web_leptos_hydrate", "crates/wasm_component_guest", "crates/wasm_component_host"]
 
 [workspace.package]
@@ -55,7 +55,6 @@ approx = "0.3"
 base64 = "0.22.1"
 bitflags = "1.3.2"
 byteorder = "1.0"
-cc = "1.0"
 chrono = "0.4"
 clap = { version = "4.5", features = ["derive"] }
 crossbeam = "0.8"
@@ -106,6 +105,14 @@ walkdir = "2.5"
 
 [target.'cfg(target_os = "linux")'.dependencies]
 syslog = "5.0"
+
+# `no-panic` proves functions are panic-free via a linker trick that only
+# works when the compiler actually optimizes the code away; the default dev
+# profile (opt-level 0) leaves the panic paths in, so debug builds/tests of
+# this crate fail to link. Opt it into release-level optimizations even in
+# dev/test builds.
+[profile.dev.package.no-panic-example]
+opt-level = 2
 
 [build-dependencies]
 skeptic = { git = "https://github.com/AndyGauge/rust-skeptic", branch = "rlib-patch" }

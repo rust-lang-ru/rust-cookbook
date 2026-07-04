@@ -16,6 +16,7 @@ const REMOVED_TESTS: &[&str] = &[
 const REMOVED_PREFIXES: &[&str] = &[
     "./src/algorithms/randomness/",
     "./src/configuration/",
+    "./src/development_tools/build_tools/",
     "./src/development_tools/debugging/tracing/",
     "./src/multimedia/",
     "./src/parsing/",

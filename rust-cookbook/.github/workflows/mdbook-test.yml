@@ -52,3 +52,17 @@ jobs:
             echo "❌ Workspace check failed. Check the logs above for details."
             exit 1
           fi
+      - name: cargo test workspace crates
+        id: cargo_test_workspace
+        # rust-cookbook is excluded: its tests are the skeptic-generated doc tests
+        # already covered by the `test` job above.
+        run: cargo test --workspace --exclude rust-cookbook
+      - name: Workspace Test Results
+        if: always()
+        run: |
+          if [ "${{ steps.cargo_test_workspace.outcome }}" == "success" ]; then
+            echo "✅ Workspace crate tests passed!"
+          else
+            echo "❌ Workspace crate tests failed. Check the logs above for details."
+            exit 1
+          fi

@@ -1,0 +1,11 @@
+[package]
+name = "cc-defines"
+version = "1.0.2"
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+build = "build.rs"
+
+[build-dependencies]
+cc = "1"

@@ -9,56 +9,22 @@ a bundled C file with dynamic defines set in `build.rs` and prints "**Welcome to
 when run. Cargo sets some [environment variables][cargo-env] which may be useful for some custom defines.
 
 
-`Cargo.toml`
-
-```toml
-[package]
-...
-version = "1.0.2"
-build = "build.rs"
-
-[build-dependencies]
-cc = "1"
-```
-
 `build.rs`
 
-```rust,edition2018,no_run
-fn main() {
-    cc::Build::new()
-        .define("APP_NAME", "\"foo\"")
-        .define("VERSION", format!("\"{}\"", env!("CARGO_PKG_VERSION")).as_str())
-        .define("WELCOME", None)
-        .file("src/foo.c")
-        .compile("foo");
-}
+```rust
+{{#include ../../../crates/development_tools/build_tools/cc_defines/build.rs }}
 ```
 
 `src/foo.c`
 
 ```c
-#include <stdio.h>
-
-void print_app_info() {
-#ifdef WELCOME
-    printf("Welcome to ");
-#endif
-    printf("%s - version %s\n", APP_NAME, VERSION);
-}
+{{#include ../../../crates/development_tools/build_tools/cc_defines/src/foo.c }}
 ```
 
 `src/main.rs`
 
-```rust,edition2018,ignore
-extern {
-    fn print_app_info();
-}
-
-fn main(){
-    unsafe {
-        print_app_info();
-    }   
-}
+```rust
+{{#include ../../../crates/development_tools/build_tools/cc_defines/src/main.rs }}
 ```
 
 [cargo-env]: https://doc.rust-lang.org/cargo/reference/environment-variables.html
