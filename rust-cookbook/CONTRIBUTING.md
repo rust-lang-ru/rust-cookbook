@@ -157,32 +157,25 @@ crates: we decide which crates to represent in the cookbook, then come
 up with example use cases to write, then write the examples. And those
 are the three basic, recurring types of contributions needed.
 
-The development process for the cookbook today is tied to the [libz
-blitz], a broader project to improve the Rust crate ecosystem, and the
-cookbook presently represents the crates under consideration there.
-The easiest way to find the most immediate work needed for the
-cookbook is to follow the "What's next" section at the top of that
-thread, which should at all times link to something to contribute to
-the cookbook.
-
-Otherwise, look for GitHub issues with the [example] tag. The simplest
-way to contribute is to claim one of these examples, and submit a PR
-adding it. If you do claim one, please leave a comment saying so, so
-others don't accidentally duplicate your work.
+Look for GitHub issues with the [example] tag. The simplest way to
+contribute is to claim one of these examples, and submit a PR adding
+it. If you do claim one, please leave a comment saying so, so others
+don't accidentally duplicate your work.
 
 If you have an idea for an example for a specific crate, please
 suggest it on the relevant [tracking issue].
 
-Please do not submit examples for crates not yet represented in the
-cookbook, unless it is part of the libz blitz crate schedule.
-Contribution will be open to a broader set of crates in the future.
-For more about which crates are represented in the cookbook, see ["a
-note about crate representation"][which-crates] in the cookbook.
+A crate should generally only be added to the cookbook if it is the
+(or a) recommendation for its problem domain on [blessed.rs], or ranks
+at or near the top of its [crates.io] category by downloads. For more
+about which crates are represented in the cookbook, see ["a note about
+crate representation"][which-crates] in the cookbook.
 
 [example]: https://github.com/rust-lang-nursery/rust-cookbook/issues?q=is%3Aissue+is%3Aopen+label%3Aexample
 [tracking issue]: https://github.com/rust-lang-nursery/rust-cookbook/issues?q=is%3Aissue+is%3Aopen+label%3A%22tracking+issue%22
 [which-crates]: https://rust-lang-nursery.github.io/rust-cookbook/about.html#a-note-about-crate-representation
-[libz blitz]: https://internals.rust-lang.org/t/rust-libz-blitz/5184
+[blessed.rs]: https://blessed.rs
+[crates.io]: https://crates.io
 
 ## Adding an example
 

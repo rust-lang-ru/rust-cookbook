@@ -60,6 +60,7 @@ bufwriter
 byteorder
 ByteRecord
 bytestring
+bzip
 cAFeEDEcafBAd
 CannotBeABase
 ccccff
@@ -149,6 +150,7 @@ GlobError
 graphemes
 Graphemes
 Guybrush
+gzip
 GzDecoder
 GzEncoder
 Hackerman
@@ -212,6 +214,7 @@ LazyLock
 leptos
 Leptos
 LevelFilter
+libc
 libhello
 Libz
 linux

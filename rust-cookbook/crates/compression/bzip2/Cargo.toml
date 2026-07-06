@@ -1,0 +1,10 @@
+[package]
+name = "bzip2-example"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+bzip2 = "0.6"

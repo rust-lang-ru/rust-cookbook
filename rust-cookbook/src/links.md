@@ -72,6 +72,8 @@ Keep lines sorted.
 [bitflags]: https://docs.rs/bitflags/
 [byteorder-badge]: https://img.shields.io/crates/v/byteorder.svg?label=byteorder
 [byteorder]: https://docs.rs/byteorder/
+[bzip2-badge]: https://img.shields.io/crates/v/bzip2.svg?label=bzip2
+[bzip2]: https://docs.rs/bzip2/
 [cc-badge]: https://img.shields.io/crates/v/cc.svg?label=cc
 [cc]: https://docs.rs/cc
 [chrono-badge]: https://img.shields.io/crates/v/chrono.svg?label=chrono

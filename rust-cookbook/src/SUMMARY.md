@@ -22,6 +22,8 @@
   - [Environment Variables](cli/env.md)
 - [Compression](compression.md)
   - [Working with Tarballs](compression/tar.md)
+  - [Working with Gzip](compression/gzip.md)
+  - [Working with Bzip2](compression/bzip2.md)
 - [Concurrency](concurrency.md)
   - [Explicit Threads](concurrency/threads.md)
   - [Synchronization Primitives](concurrency/sync.md)

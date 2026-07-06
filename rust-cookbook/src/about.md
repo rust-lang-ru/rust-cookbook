@@ -114,11 +114,19 @@ At present the cookbook is focused on the standard library, and on
 common programming tasks, and that the rest of the ecosystem builds
 off of.
 
-The cookbook is closely tied to the [Rust Libz Blitz], a project to
-identify, and improve the quality of such crates, and so it largely
-defers crate selection to that project. Any crates that have already
-been evaluated as part of that process are in scope for the cookbook,
-as are crates that are pending evaluation.
+A crate is in scope for the cookbook if it meets one of these bars:
+
+- It is the (or a) recommendation for its problem domain on
+  [blessed.rs], a curated guide to which crate to reach for in a given
+  situation.
+- It ranks at or near the top of its [crates.io] category, sorted by
+  downloads. Category rank matters more than raw download count, since
+  aggregate downloads favor old, low-level crates (like `libc` or
+  `syn`) that aren't cookbook material on their own.
+
+Either way, the crate should also be actively maintained (a release or
+commit within the last year), have [docs.rs] documentation, and use a
+standard OSI license.
 
 {{#include links.md}}
 
@@ -126,7 +134,7 @@ as are crates that are pending evaluation.
 [error-docs]: https://doc.rust-lang.org/book/ch09-00-error-handling.html
 [error-blog]: https://brson.github.io/2016/11/30/starting-with-error-chain
 [error-chain]: https://docs.rs/error-chain/
-[Rust Libz Blitz]: https://internals.rust-lang.org/t/rust-libz-blitz/5184
+[blessed.rs]: https://blessed.rs
 [crates.io]: https://crates.io
 [docs.rs]: https://docs.rs
 [Cargo.toml]: http://doc.crates.io/manifest.html
