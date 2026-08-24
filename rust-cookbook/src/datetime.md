@@ -3,6 +3,9 @@
 | Recipe | Crates | Categories |
 |--------|--------|------------|
 | [Measure elapsed time][ex-measure-elapsed-time] | [![std-badge]][std] | [![cat-time-badge]][cat-time] |
+| [Deadline arithmetic with Duration][ex-deadline-arithmetic-std] | [![std-badge]][std] | [![cat-time-badge]][cat-time] |
+| [Convert SystemTime to UNIX timestamp][ex-convert-to-unix-timestamp-std] | [![std-badge]][std] | [![cat-time-badge]][cat-time] |
+| [Benchmark a closure with Instant][ex-benchmark-closure] | [![std-badge]][std] | [![cat-time-badge]][cat-time] |
 | [Perform checked date and time calculations][ex-datetime-arithmetic] | [![chrono-badge]][chrono] | [![cat-date-and-time-badge]][cat-date-and-time] |
 | [Convert a local time to another timezone][ex-convert-datetime-timezone] | [![chrono-badge]][chrono] | [![cat-date-and-time-badge]][cat-date-and-time] |
 | [Examine the date and time][ex-examine-date-and-time] | [![chrono-badge]][chrono] | [![cat-date-and-time-badge]][cat-date-and-time] |
@@ -11,6 +14,9 @@
 | [Parse string into DateTime struct][ex-parse-datetime] | [![chrono-badge]][chrono] | [![cat-date-and-time-badge]][cat-date-and-time] |
 
 [ex-measure-elapsed-time]: datetime/duration.html#measure-the-elapsed-time-between-two-code-sections
+[ex-deadline-arithmetic-std]: datetime/duration.html#deadline-arithmetic-with-instant
+[ex-convert-to-unix-timestamp-std]: datetime/duration.html#convert-systemtime-to-unix-timestamp
+[ex-benchmark-closure]: datetime/duration.html#benchmark-a-closure-with-instant
 [ex-datetime-arithmetic]: datetime/duration.html#perform-checked-date-and-time-calculations
 [ex-convert-datetime-timezone]: datetime/duration.html#convert-a-local-time-to-another-timezone
 [ex-examine-date-and-time]: datetime/parse.html#examine-the-date-and-time
